@@ -54,6 +54,98 @@ body {
   
   li {
     padding: 5px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgb(12, 12, 12);
   }
+  body.tablas-page {
+    background: url('fondo-tablas.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #ebe7e7;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .titulo-tablas {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 40px 0 20px;
+    color: #f16522;
+  }
+  
+  .contenedor-tablas {
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+    max-width: 1200px;
+  }
+  
+  .tablas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .tarjeta-tabla {
+    background: #0000006e;
+    border: 2px solid #f16522;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    text-align: center;
+  }
+  
+  .tarjeta-tabla h2 {
+    margin-top: 0;
+    font-size: 1.3em;
+    color: #f16522;
+  }
+  
+  .tarjeta-tabla .precio {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  .alineado {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .alineado li {
+    display: flex;
+    gap: 10px;
+    font-family: 'Courier New', monospace; /* Fuente monoespaciada para alineación */
+    font-size: 16px;
+  }
+  
+  .cantidad {
+    width: 30px;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  .nombre {
+    flex: 1;
+  }
+  .logo-header {
+    display: flex;
+    justify-content: center; /* centra el conjunto horizontalmente */
+    align-items: center;     /* alinea verticalmente */
+    gap: 12px;               /* espacio entre imagen y texto */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .logo-header .logo {
+    width: 130px;     /* ajusta tamaño del logo */
+    height: auto;
+  }
+  
   
