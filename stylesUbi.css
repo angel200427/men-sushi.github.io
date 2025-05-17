@@ -1,0 +1,99 @@
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ffb347;
+    }
+
+    .mapa {
+      margin: 2rem auto;
+      max-width: 600px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+    }
+
+    .boton-maps {
+      display: inline-block;
+      margin: 1rem 0;
+      padding: 0.7rem 1.2rem;
+      background-color: #ffb347;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .boton-maps:hover {
+      background-color: #e28e33;
+    }
+
+    .horarios {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: #ffdab9;
+    }
+
+    .tabla-horarios {
+        margin: 2rem auto;           /* Centra horizontalmente y da espacio arriba/abajo */
+        border-collapse: collapse;   /* Elimina espacios entre celdas */
+        width: 80%;                  /* O ajusta según tu preferencia */
+        max-width: 500px;
+        background-color: rgba(255, 255, 255, 0.05); /* Fondo suave para contraste */
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        color: #fff;
+        text-align: center;
+        font-size: 1rem;
+      }
+      
+      .tabla-horarios th,
+      .tabla-horarios td {
+        padding: 0.75rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .tabla-horarios thead {
+        background-color: #ffb347;
+        color: #000;
+      }
+      
+      .tabla-horarios tbody tr:last-child td {
+        border-bottom: none;
+      }
+      
+  .boton-regreso {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: #ffb347;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    width: fit-content;
+    transition: background 0.3s ease;
+  }
+  
+  .boton-regreso:hover {
+    background-color: #e28e33;
+  }
+  

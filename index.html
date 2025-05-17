@@ -2,156 +2,70 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🍣 Menú Sushi Land</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍣 Sushi Land</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
-<body class="tablas-page">
-  <div class="background-overlay"></div>
+<body>
   <div class="container">
-    <header class="logo-header">
-      <img src="img/sushi logo.jpg" alt="Logo Sushi Land" class="logo centrado">
-      <h1>Menú Sushi Land</h1>
+    <!-- Logo redondo -->
+    <header class="logo-header centrado">
+      <img src="img/sushi logo.jpg" alt="Logo Sushi Land" class="logo" />
+      <h1 class="titulo-principal">Sushi Land</h1>
     </header>
     
 
-    <section class="menu">
-      <h2>Rollos Precocidos</h2>
-      <ul>
-        <li><strong>Kioto:</strong> Camarón apanizado con ajonjolí</li>
-        <li><strong>Sendai:</strong> Camarón con aguacate y maduro</li>
-        <li><strong>Aomori Roll:</strong> Queso crema , aguacate ,pollo crujiente ( cobertura de aguacate y mango )</li>
-        <li><strong>Acevichado:</strong> Camarón, pimientos, ceviche de corvina</li>
-        <li><strong>Maki:</strong> Kanikama, pepinillo (alga por fuera)</li>
-        <li><strong>Burger:</strong> Carne molida, lechuga, papa, tocino, salsa BBQ</li>
-        <li><strong>Chicken Roll:</strong> Pollo con tocino BBQ</li>
-        <li><strong>Tataki:</strong> Camarón, cebollín, aguacate</li>
-        <li><strong>Ebi:</strong> Aguacate y camarón crujiente, kamikama</li>
-        <li><strong>Volcano Roll:</strong> Aguacate, camarón, atún, mayo japonesa, Doritos picantes</li>
-        <li><strong>Abicato Roll:</strong> Aguacate, camarón, cebollín, queso crema, (Cobertura de Aguacate)</li>
-        <li><strong>Fresh Roll:</strong> Queso crema ,Mango , aguacate, (Cobertura de frutilla)</li>
-        <li><strong>gimbap Maki Roll:</strong>    Queso crema, Tiras de Huevo, Vegetales Tempura, Tiras de Salchicha</li>
-<h2>Rollos crudos</h2>
-<li><strong>Sake:</strong> Salmón (crudo)</li>
-<li><strong>Crunch Roll:</strong> Aguacate, atún, salmón tempurizado con surimi</li>
-<li><strong>Nori Roll:</strong> Queso crema, salmón, pepinillo, surimi</li>
-<li><strong>Atún Roll:</strong> Atún, queso crema, pepinillo, tocino</li>
-<h2>Rollos Calientes</h2>
-        <li><strong>Kobe:</strong> Surimi con aguacate</li>
-        <li><strong>Titán Oriental:</strong> Maduro, kamikama, aguacate</li>
-        <li><strong>Madurito Roll:</strong> Maduro , aguacate , queso crema ,camarón , lechuga o cebollin</li>
-      </ul>
-      <p><strong>Rollos calientes a elegir:</strong> Tempurizado | Apanizado | Panco</p>
+    <!-- Descripción -->
+    <section class="descripcion">
+      <p>
+        Bienvenidos a <strong>Sushi Land</strong>, tu rincón de sabor asiático con un toque tropical. Disfruta de rollos artesanales,
+        ramen reconfortante, sushi burgers únicas y ensaladas frescas. Perfecto para compartir en familia o con amigos.
+        ¡Te esperamos con los palillos abiertos!
+      </p>
     </section>
 
-    <!-- NUEVA SECCIÓN DE TABLAS ESTILO BONITO -->
-    <section class="contenedor-tablas">
-      <h2 class="titulo-tablas">TABLAS POR BOCADOS</h2>
-      <div class="tablas-grid">
-        <div class="tarjeta-tabla">
-          <h2>20 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">5</span><span class="nombre">Titan Oriental</span></li>
-            <li><span class="cantidad">5</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">5</span><span class="nombre">Volcano</span></li>
-            <li><span class="cantidad">5</span><span class="nombre">Ebi</span></li>
-          </ul>
-          <span class="precio">$10</span>
-        </div>
-        <div class="tarjeta-tabla">
-          <h2>30 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">10</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Fresh Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Ebi</span></li>
-          </ul>
-          <span class="precio">$15</span>
-        </div>
-        
-        <div class="tarjeta-tabla">
-          <h2>40 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">10</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Maki</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Ebi</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Volcano</span></li>
-          </ul>
-          <span class="precio">$20</span>
-        </div>
-        
-        <div class="tarjeta-tabla">
-          <h2>60 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">10</span><span class="nombre">Acevichado</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Tataki</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Volcano Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Madurito Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Abicato Roll</span></li>
-          </ul>
-          <span class="precio">$25</span>
-        </div>
-        
-        <div class="tarjeta-tabla">
-          <h2>70 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">10</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Maki</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Ebi</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Volcano Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Titan Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Acevichado</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Aomori Roll</span></li>
-          </ul>
-          <span class="precio">$30</span>
-        </div>
-        
-        <div class="tarjeta-tabla">
-          <h2>80 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">10</span><span class="nombre">Tataki</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Ebi</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Kioto</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Sendai</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Madurito Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Sake</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Atun Roll</span></li>
-          </ul>
-          <span class="precio">$35</span>
-        </div>
+    <!-- Botones -->
+    <section class="botones-navegacion">
+      <button onclick="window.location.href = 'menu.html'">📄 Menú</button>
+  <button onclick="window.location.href = 'Ubicacion.html'">📍 Ubicación y Horarios</button>
+  <button onclick="window.location.href = 'pedidos.html'">🛒 Pedidos a Domicilio</button>
+  <button onclick="window.location.href = 'reserva.html'">📝 Reserva tu Mesa</button>
+  <button onclick="window.location.href = 'contacto.html'">📧 Contactar</button>
+    </section>
+
+    <!-- Galería -->
+    <section class="galeria">
+      <h2>🖼️ Galería de Fotos</h2>
+      <div class="galeria-grid">
+        <img src="img/sushi2.jpg" alt="Rollo de sushi" />
+        <img src="img/hamburguesa.jpg" alt="Sushi Burger" />
+        <img src="img/ensalada.jpg" alt="Ensalada" />
+        <img src="img/ramen.jpg" alt="Ramen delicioso" />
+
       </div>
     </section>
 
-    <!-- DEMÁS SECCIONES -->
-    <section class="menu">
-      <h2>🍔 Sushi Burgers</h2>
-      <ul>
-        <li>Hamburguesa de Carne - $5.00</li>
-        <li>Hamburguesa de Pollo - $5.00</li>
-      </ul>
-
-      <h2>🍜 Ramen</h2>
-      <ul>
-        <li>Ramen de Cerdo - $4.00</li>
-        <li>Ramen Pollo - $4.00</li>
-      </ul>
-
-      <h2>🥗 Ensaladas</h2>
-<ul>
-  <li>
-    <strong>Ensalada Mar y Tierra - $5.00</strong><br>
-    Camarón (4 camarones grandes)<br> Tomate cherry (100gr)<br> Pepinillo (200gr)<br> Lechuga (100gr),<br>
-    Zanahoria (100gr)<br> Canicama (100gr)<br> Coll morada (100grai)<br>
-  </li>
-      <h2>🍹 Bebidas</h2>
-      <ul>
-        <li>Coca colas sprite de litro - $2.00</li>
-        <li>Coca Cola - $3.00</li>
-        <li>Michelada de mora - $1.00</li>
-        <li>Michelada de maracuyá - $1.00</li>
-      </ul>
+    <!-- Videos -->
+    <section class="galeria">
+      <h2>🎥 Videos del Local</h2>
+      <div class="galeria-grid">
+        <video src="video/local.mp4" controls></video>
+        <video src="video/sushiman.mp4" controls></video>
+      </div>
     </section>
+
+    <!-- Botón de compartir -->
+    <!-- Botón de compartir arriba izquierda -->
+<div class="boton-compartir-superior">
+  <button onclick="toggleOpciones()">💌</button>
+  <div class="opciones-compartir" id="opcionesCompartir">
+    <button onclick="navigator.clipboard.writeText(window.location.href)">🔗 Copiar Link</button>
+    <button onclick="window.open('https://wa.me/?text=' + encodeURIComponent(window.location.href))">📱 WhatsApp</button>
+    <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href))">💙 Facebook</button>
+    <button onclick="window.print()">📸 Imprimir / QR</button>
+  </div>
+</div>
   </div>
 </body>
 </html>

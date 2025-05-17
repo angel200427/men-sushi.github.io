@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedidos a Domicilio - Sushi Land</title>
+  <link rel="stylesheet" href="stylesPedi.css" />
+  <script src="scriptPedi.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1 class="centrado">🛒 Pedidos a Domicilio</h1>
+    <p class="centrado">Llámanos al <strong>+593 987 654 321</strong> o envía un mensaje por WhatsApp. <br></p>
+    <a href="index.html" class="boton-regreso">⬅️ Volver al Inicio</a>
+    <section id="menu" class="fade-in">
+      <h2>Elige tu categoría</h2>
+      <select id="categoria-selector">
+        <option value="">Selecciona una opción</option>
+        <option value="sushi">Sushi</option>
+        <option value="hamburguesa">Hamburguesas</option>
+        <option value="ramen">Ramen</option>
+        <option value="postres">Postres</option>
+        <option value="bebidas">Bebidas</option>
+      </select>
+    </section>
+
+    <!-- Sushi -->
+    <section id="personaliza-sushi" class="categoria-section fade-in" style="display: none;">
+      <h2>Personaliza tu Sushi</h2>
+      <img src="img/sushi.jpg" alt="Sushi delicioso" class="banner-img">
+      <p>Elige tu base y tus ingredientes favoritos.</p>
+      <form>
+        <label for="base">Base del Sushi:</label>
+        <label for="rollo">Selecciona tu rollo favorito:</label>
+        <select id="rollo" name="rollo">
+          <option value="">-- Selecciona un rollo --</option>
+          <optgroup label="Rollos Clásicos">
+            <option value="kioto">Kioto - Camarón apanizado con ajonjolí</option>
+            <option value="sendai">Sendai - Camarón con aguacate y maduro</option>
+            <option value="aomori">Aomori Roll - Queso crema, aguacate, pollo crujiente (cobertura de aguacate y mango)</option>
+            <option value="acevichado">Acevichado - Camarón, pimientos, ceviche de corvina</option>
+            <option value="maki">Maki - Kanikama, pepinillo (alga por fuera)</option>
+            <option value="burger">Burger - Carne molida, lechuga, papa, tocino, salsa BBQ</option>
+            <option value="chicken-roll">Chicken Roll - Pollo con tocino BBQ</option>
+            <option value="tataki">Tataki - Camarón, cebollín, aguacate</option>
+            <option value="ebi">Ebi - Aguacate y camarón crujiente, kanikama</option>
+            <option value="volcano">Volcano Roll - Aguacate, camarón, atún, mayo japonesa, Doritos picantes</option>
+            <option value="abicato">Abicato Roll - Aguacate, camarón, cebollín, queso crema (cobertura de aguacate)</option>
+            <option value="fresh">Fresh Roll - Queso crema, mango, aguacate (cobertura de frutilla)</option>
+            <option value="gimbap">Gimbap Maki Roll - Queso crema, huevo, vegetales tempura, salchicha</option>
+          </optgroup>
+        
+          <optgroup label="Rollos Crudos">
+            <option value="sake">Sake - Salmón (crudo)</option>
+            <option value="crunch">Crunch Roll - Aguacate, atún, salmón tempurizado con surimi</option>
+            <option value="nori">Nori Roll - Queso crema, salmón, pepinillo, surimi</option>
+            <option value="atun-roll">Atún Roll - Atún, queso crema, pepinillo, tocino</option>
+          </optgroup>
+        
+          <optgroup label="Rollos Calientes">
+            <option value="kobe">Kobe - Surimi con aguacate</option>
+            <option value="titan">Titán Oriental - Maduro, kanikama, aguacate</option>
+            <option value="madurito">Madurito Roll - Maduro, aguacate, queso crema, camarón, lechuga o cebollín</option>
+          </optgroup>
+        </select>
+        
+        <fieldset>
+            <legend>Ingredientes:</legend>
+            <label><input type="checkbox" name="ingredientes" value="atun"> Atún</label>
+            <label><input type="checkbox" name="ingredientes" value="salmon"> Salmón</label>
+            <label><input type="checkbox" name="ingredientes" value="surimi"> Surimi (kanikama)</label>
+            <label><input type="checkbox" name="ingredientes" value="camaron"> Camarón</label>
+            <label><input type="checkbox" name="ingredientes" value="camaron-crujiente"> Camarón crujiente</label>
+            <label><input type="checkbox" name="ingredientes" value="pollo"> Pollo</label>
+            <label><input type="checkbox" name="ingredientes" value="pollo-crujiente"> Pollo crujiente</label>
+            <label><input type="checkbox" name="ingredientes" value="tocino"> Tocino</label>
+            <label><input type="checkbox" name="ingredientes" value="carne"> Carne molida</label>
+            <label><input type="checkbox" name="ingredientes" value="huevo"> Tiras de huevo</label>
+            <label><input type="checkbox" name="ingredientes" value="salchicha"> Salchicha</label>
+            <label><input type="checkbox" name="ingredientes" value="queso"> Queso crema</label>
+            <label><input type="checkbox" name="ingredientes" value="aguacate"> Aguacate</label>
+            <label><input type="checkbox" name="ingredientes" value="mango"> Mango</label>
+            <label><input type="checkbox" name="ingredientes" value="maduro"> Maduro</label>
+            <label><input type="checkbox" name="ingredientes" value="frutilla"> Frutilla</label>
+            <label><input type="checkbox" name="ingredientes" value="pimientos"> Pimientos</label>
+            <label><input type="checkbox" name="ingredientes" value="pepinillo"> Pepinillo</label>
+            <label><input type="checkbox" name="ingredientes" value="cebollin"> Cebollín</label>
+            <label><input type="checkbox" name="ingredientes" value="vegetales-tempura"> Vegetales tempura</label>
+            <label><input type="checkbox" name="ingredientes" value="lechuga"> Lechuga</label>
+            <label><input type="checkbox" name="ingredientes" value="ceviche-corvina"> Ceviche de corvina</label>
+            <label><input type="checkbox" name="ingredientes" value="doritos"> Doritos picantes</label>
+          </fieldset>
+      
+          <fieldset>
+            <legend>Elige una Cobertura:</legend>
+            <label><input type="radio" name="cobertura" value="sin"> Sin cobertura</label>
+            <label><input type="radio" name="cobertura" value="aguacate"> Aguacate</label>
+            <label><input type="radio" name="cobertura" value="mango"> Mango</label>
+            <label><input type="radio" name="cobertura" value="frutilla"> Frutilla</label>
+            <label><input type="radio" name="cobertura" value="tempura"> Tempurizado</label>
+          </fieldset>
+      
+          <fieldset>
+            <legend>Salsas Disponibles:</legend>
+            <label><input type="radio" name="salsa" value="soya"> Salsa de soya</label>
+            <label><input type="radio" name="salsa" value="teriyaki"> Salsa Teriyaki</label>
+            <label><input type="radio" name="salsa" value="anguila"> Salsa de anguila</label>
+            <label><input type="radio" name="salsa" value="Maracuya"> Maracuya</label>
+            <label><input type="radio" name="salsa" value="bbq"> Salsa de wasabi</label>
+            
+          </fieldset>
+      
+          <button type="submit">Agregar al Carrito</button>
+        </form>
+      </section>
+    <!-- Ramen -->
+    <section id="personaliza-ramen" class="categoria-section fade-in" style="display: none;">
+      <h2>Elige tu Ramen</h2>
+      <img src="img/ramen-banner.jpg" alt="Ramen caliente" class="banner-img">
+      <form>
+        <label for="tipo-ramen">Tipo:</label>
+        <select id="tipo-ramen">
+          <option value="pollo">Pollo</option>
+          <option value="chancho">Chancho</option>
+          <option value="camaron">Camarón</option>
+          <option value="vegetariano">Vegetariano</option>
+        </select>
+        <fieldset>
+          <legend>Salsas Disponibles:</legend>
+          <label><input type="radio" name="salsa-ramen" value="miso"> Miso</label>
+          <label><input type="radio" name="salsa-ramen" value="soya"> Soya</label>
+          <label><input type="radio" name="salsa-ramen" value="picante"> Picante</label>
+        </fieldset>
+        <button type="submit">Agregar al Carrito</button>
+      </form>
+    </section>
+
+    <!-- Postres -->
+    <section id="personaliza-postres" class="categoria-section fade-in" style="display: none;">
+      <h2>Elige tu Postre</h2>
+      <img src="img/postres-banner.jpg" alt="Postres japoneses" class="banner-img">
+      <form>
+        <fieldset>
+          <legend>Selecciona tus postres favoritos:</legend>
+          <label><input type="checkbox" name="postres" value="mochi-fresa"> Mochi de fresa</label>
+          <label><input type="checkbox" name="postres" value="mochi-te-verde"> Mochi de té verde</label>
+          <label><input type="checkbox" name="postres" value="mochi-mango"> Mochi de mango</label>
+          <label><input type="checkbox" name="postres" value="helado"> Helado japonés</label>
+          <label><input type="checkbox" name="postres" value="pastel-matcha"> Pastel de matcha</label>
+        </fieldset>
+        <button type="submit">Agregar al Carrito</button>
+      </form>
+    </section>
+
+    <!-- Bebidas -->
+    <section id="personaliza-bebidas" class="categoria-section fade-in" style="display: none;">
+      <h2>Selecciona tu Bebida</h2>
+      <img src="img/bebidas-banner.jpg" alt="Bebidas frías" class="banner-img">
+      <form>
+        <fieldset>
+          <legend>Elige las bebidas que desees:</legend>
+          <label><input type="checkbox" name="bebidas" value="te-verde"> Té verde helado</label>
+          <label><input type="checkbox" name="bebidas" value="refresco"> Refresco</label>
+          <label><input type="checkbox" name="bebidas" value="agua"> Agua mineral</label>
+        </fieldset>
+        <button type="submit">Agregar al Carrito</button>
+      </form>
+    </section>
+
+    <div id="finalizar-pedido" style="display: none; text-align: center; margin: 20px;">
+      <button onclick="finalizarPedido()">✅ Finalizar Pedido</button>
+    </div>
+
+    <div class="centrado" style="margin-top: 2rem;">
+     
+    </div>
+  </main>
+</body>
+</html>
