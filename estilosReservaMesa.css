@@ -87,4 +87,20 @@ body {
       opacity: 1;
     }
   }
+    .boton-regreso {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: #ffb347;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    width: fit-content;
+    transition: background 0.3s ease;
+  }
   
+  .boton-regreso:hover {
+    background-color: #e28e33;
+  }

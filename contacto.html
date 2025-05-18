@@ -4,12 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto - Sushi Land</title>
+  <link rel="stylesheet" href="styleContacto.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>📧 Contacto</h1>
-  <p>Email: sushi@land.com</p>
-  <p>Teléfono: +593 987 654 321</p>
-  <p>Instagram: @sushiland</p>
-  <a href="index.html">🔙 Volver al inicio</a>
+  <div class="container">
+    <h1>📞 Contáctanos</h1>
+    <img src="img/sushi logo.jpg" alt="Logo Sushi Land" class="logo">
+    <a href="index.html" class="boton-regreso">⬅️ Volver al Inicio</a>
+
+    <div class="info">
+      <p><strong>Nombre:</strong> Lenin Paul Soria Tipantasig</p>
+      <p><strong>Cédula:</strong> 1721254025</p>
+      <p><strong>Email:</strong> Paulin4841@hotmail.com</p>
+      <p><strong>Teléfono:</strong> 0978839941</p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/sushilandec/profilecard/?igsh=NDliaDB4NWhnbWV6" target="_blank">SIGENOS</a></p>
+    </div>
+
+    <div class="banks">
+      <h2>💳 Datos Bancarios</h2>
+      <p><img src="img/pichincha-logo.png" alt="Banco Pichincha"> Banco Pichincha - Ahorros No. <strong>2209111041</strong></p>
+      <p><img src="img/guayaquil-logo.png" alt="Banco Guayaquil"> Banco Guayaquil - Ahorros No. <strong>0019842261</strong></p>
+      <img src="img/qr.jpg" alt="Código QR" class="qr" />
+    </div>
+
+    <div class="formulario">
+      <h2>📬 Escríbenos</h2>
+      <form>
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu email" required />
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+
+    <div class="mapa">
+      <h2>📍 Nuestra ubicación</h2>
+      <iframe
+        src="https://maps.app.goo.gl/9bxmNteALoeMnG9U7?g_st=ac"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    
+  </div>
+
+  <!-- Botón de WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/message/MRCXIERZC2D2O1" target="_blank" title="Chatea con nosotros">
+    💬
+  </a>
+
+  <script src="scriptContacto.js"></script>
 </body>
 </html>

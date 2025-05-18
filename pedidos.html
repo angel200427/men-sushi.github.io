@@ -10,7 +10,7 @@
 <body>
   <main class="container">
     <h1 class="centrado">🛒 Pedidos a Domicilio</h1>
-    <p class="centrado">Llámanos al <strong>+593 987 654 321</strong> o envía un mensaje por WhatsApp. <br></p>
+    <p class="centrado">Llámanos al <strong>0978839941</strong> o envía un mensaje por WhatsApp. <br></p>
     <a href="index.html" class="boton-regreso">⬅️ Volver al Inicio</a>
     <section id="menu" class="fade-in">
       <h2>Elige tu categoría</h2>
@@ -93,30 +93,51 @@
       
           <fieldset>
             <legend>Elige una Cobertura:</legend>
-            <label><input type="radio" name="cobertura" value="sin"> Sin cobertura</label>
-            <label><input type="radio" name="cobertura" value="aguacate"> Aguacate</label>
-            <label><input type="radio" name="cobertura" value="mango"> Mango</label>
-            <label><input type="radio" name="cobertura" value="frutilla"> Frutilla</label>
-            <label><input type="radio" name="cobertura" value="tempura"> Tempurizado</label>
+            <label><input type="checkbox" name="cobertura" value="sin"> Sin cobertura</label>
+            <label><input type="checkbox" name="cobertura" value="aguacate"> Aguacate</label>
+            <label><input type="checkbox" name="cobertura" value="mango"> Mango</label>
+            <label><input type="checkbox" name="cobertura" value="frutilla"> Frutilla</label>
+            <label><input type="checkbox" name="cobertura" value="tempura"> Tempurizado</label>
           </fieldset>
       
           <fieldset>
             <legend>Salsas Disponibles:</legend>
-            <label><input type="radio" name="salsa" value="soya"> Salsa de soya</label>
-            <label><input type="radio" name="salsa" value="teriyaki"> Salsa Teriyaki</label>
-            <label><input type="radio" name="salsa" value="anguila"> Salsa de anguila</label>
-            <label><input type="radio" name="salsa" value="Maracuya"> Maracuya</label>
-            <label><input type="radio" name="salsa" value="bbq"> Salsa de wasabi</label>
+            <label><input type="checkbox" name="salsa" value="soya"> Salsa de soya</label>
+            <label><input type="checkbox" name="salsa" value="teriyaki"> Salsa Teriyaki</label>
+            <label><input type="checkbox" name="salsa" value="anguila"> Salsa de anguila</label>
+            <label><input type="checkbox" name="salsa" value="Maracuya"> Maracuya</label>
+            <label><input type="checkbox" name="salsa" value="bbq"> Salsa de wasabi</label>
             
           </fieldset>
       
           <button type="submit">Agregar al Carrito</button>
         </form>
       </section>
+        <!-- Hamburguesa -->
+    <section id="personaliza-hamburguesa" class="categoria-section fade-in" style="display: none;">
+      <h2>Arma tu Hamburguesa</h2>
+      <img src="img/hamburguesa.jpg" alt="Hamburguesa jugosa" class="banner-img">
+      <form>
+        <label for="tipo-hamburguesa">Tipo:</label>
+        <select id="tipo-hamburguesa">
+          <option value="clasica">Clásica</option>
+          <option value="doble">pollo</option>
+          <option value="vegana">Carne</option>
+        </select>
+        <fieldset>
+          <legend>Ingredientes:</legend>
+          <label><input type="checkbox" value="lechuga"> Lechuga</label>
+          <label><input type="checkbox" value="tomate"> Tomate</label>
+          <label><input type="checkbox" value="queso"> Queso crema</label>
+          <label><input type="checkbox" value="Aguacate"> Aguacate</label>
+        </fieldset>
+        <button type="submit">Agregar al Carrito</button>
+      </form>
+    </section>
     <!-- Ramen -->
     <section id="personaliza-ramen" class="categoria-section fade-in" style="display: none;">
       <h2>Elige tu Ramen</h2>
-      <img src="img/ramen-banner.jpg" alt="Ramen caliente" class="banner-img">
+      <img src="img/ramen1.jpg" alt="Ramen caliente" class="banner-img">
       <form>
         <label for="tipo-ramen">Tipo:</label>
         <select id="tipo-ramen">
@@ -138,7 +159,7 @@
     <!-- Postres -->
     <section id="personaliza-postres" class="categoria-section fade-in" style="display: none;">
       <h2>Elige tu Postre</h2>
-      <img src="img/postres-banner.jpg" alt="Postres japoneses" class="banner-img">
+      <img src="img/postres.jpg" alt="Postres japoneses" class="banner-img">
       <form>
         <fieldset>
           <legend>Selecciona tus postres favoritos:</legend>
@@ -155,13 +176,13 @@
     <!-- Bebidas -->
     <section id="personaliza-bebidas" class="categoria-section fade-in" style="display: none;">
       <h2>Selecciona tu Bebida</h2>
-      <img src="img/bebidas-banner.jpg" alt="Bebidas frías" class="banner-img">
+      <img src="img/bebidas.jpg" alt="Bebidas frías" class="banner-img">
       <form>
         <fieldset>
           <legend>Elige las bebidas que desees:</legend>
-          <label><input type="checkbox" name="bebidas" value="te-verde"> Té verde helado</label>
-          <label><input type="checkbox" name="bebidas" value="refresco"> Refresco</label>
-          <label><input type="checkbox" name="bebidas" value="agua"> Agua mineral</label>
+          <label><input type="checkbox" name="bebidas" value="Michelada"> Michelada de Mora</label>
+          <label><input type="checkbox" name="bebidas" value="Michelada"> Michelada de Maracuya</label>
+          <label><input type="checkbox" name="bebidas" value="Michelada"> Michelada de Mango</label>
         </fieldset>
         <button type="submit">Agregar al Carrito</button>
       </form>
