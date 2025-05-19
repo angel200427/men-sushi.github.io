@@ -59,7 +59,7 @@ body {
   body.tablas-page {
     background: url('fondo-tablas.jpg') no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #ebe7e7;
     margin: 0;
     padding: 0;
@@ -71,66 +71,129 @@ body {
     margin: 40px 0 20px;
     color: #f16522;
   }
-  
   .contenedor-tablas {
-    background: rgba(0, 0, 0, 0.9);
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 16px;
-    max-width: 1200px;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #050505, #000000);
+    animation: fadeIn 1.5s ease-in;
   }
-  
+
+  .titulo-tablas {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #dd1010;
+    margin-bottom: 2rem;
+    animation: slideDown 1s ease-out;
+  }
+
   .tablas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
   }
-  
+
   .tarjeta-tabla {
-    background: #0000006e;
-    border: 2px solid #f16522;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    position: relative;
-    text-align: center;
+    background-color: rgb(219, 216, 216);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgb(253, 220, 72);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: zoomIn 0.6s ease forwards;
+    opacity: 0;
   }
-  
+
+  .tarjeta-tabla:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+
   .tarjeta-tabla h2 {
-    margin-top: 0;
-    font-size: 1.3em;
-    color: #f16522;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #333;
   }
-  
-  .tarjeta-tabla .precio {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: #000;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 50%;
-    font-weight: bold;
-  }
+
   .alineado {
     list-style: none;
-    padding: 0;
-    margin: 10px 0;
+    padding: 1;
+    margin: 0 0 1rem 0;
   }
-  
+
   .alineado li {
     display: flex;
-    gap: 10px;
-    font-family: 'Courier New', monospace; /* Fuente monoespaciada para alineación */
-    font-size: 16px;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: #d85026;
   }
-  
+
   .cantidad {
-    width: 30px;
-    text-align: right;
+    min-width: 30px; /* Asegura que todos los números ocupen el mismo espacio */
+  text-align: right;
+  margin-right: 1rem;
     font-weight: bold;
+    color: #772525;
   }
-  
+
+  .precio {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    background-color: #0d0d0e;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+  }
+
+  .precio:hover {
+    background-color: #f31111;
+  }
+
+  /* ANIMACIONES */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Delay animación por tarjeta */
+  .tarjeta-tabla:nth-child(1) { animation-delay: 0.1s; }
+  .tarjeta-tabla:nth-child(2) { animation-delay: 0.2s; }
+  .tarjeta-tabla:nth-child(3) { animation-delay: 0.3s; }
+  .tarjeta-tabla:nth-child(4) { animation-delay: 0.4s; }
+  .tarjeta-tabla:nth-child(5) { animation-delay: 0.5s; }
+  .tarjeta-tabla:nth-child(6) { animation-delay: 0.6s; }
+  .tarjeta-tabla:nth-child(7) { animation-delay: 0.7s; }
+
+
   .nombre {
     flex: 1;
   }
