@@ -74,15 +74,25 @@ a:hover {
   background: #b71c1c;
   transform: scale(1.05);
 }
-
-/* QR */
-.qr {
-  display: block;
-  margin: 1rem auto;
-  width: 150px;
-  border-radius: 10px;
-  animation: zoomIn 1s ease;
+.qr-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
+
+.qr {
+  width: 800px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease-in-out;
+}
+
+.qr:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
 
 /* Formulario */
 .formulario form {
@@ -228,9 +238,47 @@ button:hover {
   width: 40px;
   vertical-align: middle;
   margin-right: 10px;
+  text-align: center;
 }
 
 .banks p {
   margin: 0.5rem 0;
   font-size: 1.1rem;
 }
+.btn-mapa-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-mapa {
+  background: linear-gradient(45deg, #ff4e50, #f9d423);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.btn-mapa:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+

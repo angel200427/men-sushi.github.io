@@ -135,13 +135,15 @@ body {
     flex: 1;
   }
   .logo-header {
-    display: flex;
-    justify-content: center; /* centra el conjunto horizontalmente */
-    align-items: center;     /* alinea verticalmente */
-    gap: 12px;               /* espacio entre imagen y texto */
-    margin-bottom: 20px;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;    /* Cambia de fila a columna */
+  justify-content: center;   /* centra verticalmente */
+  align-items: center;       /* centra horizontalmente */
+  gap: 12px;                 /* espacio entre imagen y texto */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
   
   .logo-header .logo {
     width: 130px;     /* ajusta tamaño del logo */
@@ -164,4 +166,34 @@ body {
   .boton-regreso:hover {
     background-color: #e28e33;
   }
-  
+  @keyframes entradaBrillante {
+  0% {
+    transform: scale(0.5) rotate(-30deg);
+    opacity: 0;
+    filter: brightness(0.5);
+  }
+  50% {
+    transform: scale(1.2) rotate(15deg);
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+  70% {
+    transform: scale(0.95) rotate(-5deg);
+    filter: brightness(1);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.logo {
+  width: 150px;
+  animation: entradaBrillante 1.8s ease-out forwards;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Extra: efecto al pasar el mouse */
+.logo:hover {
+  transform: scale(1.1) rotate(3deg);
+  filter: brightness(1.3);
+}
