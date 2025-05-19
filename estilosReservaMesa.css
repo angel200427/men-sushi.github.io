@@ -1,92 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #f8f9fa, #d1e8e2);
-    margin: 0;
-    padding: 0;
-    color: #333;
-    animation: fadein 1.2s ease-in;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+  animation: fadein 1.2s ease-in;
+  min-height: 100vh;
+
+  /* Fondo CLARO, sin efectos visuales encima */
+  background: url('img/fondopetalos.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+}
+
+
+.container {
+  max-width: 640px;
+  backdrop-filter: blur(10px); /* Si quieres ese look "vidrio helado" */
+  margin: 60px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  animation: slide-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  animation: fadein 1s ease-in-out;
+}
+
+h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.info {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 0.6rem 0;
+  animation: fadein 1.3s ease-in-out;
+}
+
+.boton-regreso {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: #ff9f43;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  width: fit-content;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: bounceIn 1.6s ease-out;
+}
+
+.boton-regreso:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadein 1.6s ease-in-out;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+input,
+select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+input:focus,
+select:focus {
+  border-color: #3498db;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  outline: none;
+}
+
+.boton-reservar {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s ease;
+}
+
+.boton-reservar:hover {
+  background-color: #1e8449;
+  transform: scale(1.04);
+}
+
+/* ANIMACIONES */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
   }
-  
-  .container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    animation: slide-up 0.8s ease-out;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  h1, h2 {
-    text-align: center;
-    color: #2c3e50;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  
-  .info {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .boton-volver {
-    display: block;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-    transition: color 0.3s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
   }
-  .boton-volver:hover {
-    color: #1d6fa5;
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
   }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  100% {
+    transform: scale(1);
   }
-  
-  input, select {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s;
-  }
-  input:focus, select:focus {
-    border-color: #3498db;
-    outline: none;
-  }
-  
-  .boton-reservar {
-    background-color: #27ae60;
-    color: white;
-    border: none;
-    padding: 12px;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  .boton-reservar:hover {
-    background-color: #219150;
-  }
-  
-  @keyframes fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  @keyframes slide-up {
-    from {
-      transform: translateY(30px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+}
+
     .boton-regreso {
     display: block;
     text-align: center;
