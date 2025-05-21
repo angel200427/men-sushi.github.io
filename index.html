@@ -10,10 +10,11 @@
 <body>
   <div class="container">
     <!-- Logo redondo -->
-    <header class="logo-header centrado">
-      <img src="img/sushi logo.jpg" alt="Logo Sushi Land" class="logo" />
-      <h1 class="titulo-principal">Sushi Land</h1>
-    </header>
+   <header class="logo-header centrado">
+  <img src="img/sushi logo.jpg" alt="Logo Sushi Land" class="logo" />
+  <h1 class="titulo-principal">Sushi Land</h1>
+</header>
+
     
 
     <!-- Descripción -->
@@ -36,8 +37,8 @@
 
     <!-- Galería -->
     <section class="galeria">
-      <h2>🖼️ Galería de Fotos</h2>
-      <div class="galeria-grid">
+      <h2 class="titulo-galeria">Galería de Fotos</h2>
+  <div class="galeria-grid">
         <img src="img/sushi2.jpg" alt="Rollo de sushi" />
         <img src="img/hamburguesa.jpg" alt="Sushi Burger" />
         <img src="img/ensalada.jpg" alt="Ensalada" />
@@ -52,15 +53,17 @@
 <img src="img/momentos7.jpg" alt="Ramen delicioso" />
 <img src="img/momentos8.jpg" alt="Ramen delicioso" />
 <img src="img/momentos9.jpg" alt="Ramen delicioso" />
-
-
-
       </div>
     </section>
 
     <!-- Videos -->
     <section class="galeria">
-      <h2>🎥 Videos del Local</h2>
+      <h2>🎥 Videos del Local</h2><!-- Modal para ampliar imagen -->
+<div id="modalImagen" class="modal">
+  <span class="cerrar" onclick="cerrarModal()">&times;</span>
+  <img class="modal-contenido" id="imgAmpliada" />
+</div>
+
       <div class="galeria-grid">
         <video src="video/local.mp4" controls></video>
         <video src="video/sushiman.mp4" controls></video>
@@ -68,16 +71,19 @@
     </section>
 
     <!-- Botón de compartir -->
-    <!-- Botón de compartir arriba izquierda -->
-<div class="boton-compartir-superior">
-  <button onclick="toggleOpciones()">💌</button>
+ <div class="contenedor-compartir">
+  <button class="boton-compartir" onclick="toggleOpciones()">💌 Compartir</button>
+
   <div class="opciones-compartir" id="opcionesCompartir">
-    <button onclick="navigator.clipboard.writeText(window.location.href)">🔗 Copiar Link</button>
-    <button onclick="window.open('https://wa.me/message/MRCXIERZC2D2O1' + encodeURIComponent(window.location.href))">📱 WhatsApp</button>
-    <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href))">💙 Facebook</button>
-    <button onclick="window.open('https://www.instagram.com/sushilandec/profilecard/?igsh=NDliaDB4NWhnbWV6')">📷 Instagram</button>
-    <button onclick="window.print()">📸 Imprimir / QR</button>
+     <button onclick="toggleQR()">📸 Menú QR</button>
+       <img id="qrImage" src="img/frame (4).png" alt="QR del Menú">
+    <button onclick="copiarLink()">🔗 Copiar Link</button>
+    <button onclick="descargarQR()">⬇️ Descargar QR</button>
+       <a id="linkDescargaQR" href="img/frame (4).png" download="frame (4).png" style="display: none;"></a>
+    <button onclick="compartirFacebook()">💙 Facebook</button>
+    <button onclick="compartirWhatsApp()">📱 WhatsApp</button>
   </div>
+
 </div>
   </div>
 </body>
