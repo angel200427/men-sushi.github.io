@@ -21,15 +21,31 @@
       <p><strong>Instagram:</strong> <a href="https://www.instagram.com/sushilandec/profilecard/?igsh=NDliaDB4NWhnbWV6" target="_blank">SIGENOS</a></p>
     </div>
 
-   <div class="banks">
+  <div class="banks">
   <h2>💳 Datos Bancarios</h2>
-  <p><img src="img/pichincha-logo.png" alt="Banco Pichincha"> Banco Pichincha - Ahorros No. <strong>2209111041</strong></p>
-  <p><img src="img/guayaquil-logo.png" alt="Banco Guayaquil"> Banco Guayaquil - Ahorros No. <strong>0019842261</strong></p>
 
+  <p>
+    <img src="img/pichincha-logo.png" alt="Banco Pichincha">
+    Banco Pichincha - Ahorros No.
+    <strong id="cuenta-pichincha">2209111041</strong>
+    <button onclick="copiarTexto('cuenta-pichincha')">📋 Copiar</button>
+  </p>
+
+  <p>
+    <img src="img/guayaquil-logo.png" alt="Banco Guayaquil">
+    Banco Guayaquil - Ahorros No.
+    <strong id="cuenta-guayaquil">0019842261</strong>
+    <button onclick="copiarTexto('cuenta-guayaquil')">📋 Copiar</button>
+  </p>
+</div>
   <!-- Imagen del QR -->
-  <div class="qr-container">
-    <img src="img/DeUna.jpg" alt="Código QR" class="qr" />
-  </div>
+<div class="qr-container">
+  <img src="img/DeUna.jpg" alt="Código QR" class="qr" onclick="mostrarLightbox(this.src)" />
+</div>
+
+<!-- Contenedor del lightbox -->
+<div class="lightbox-bg" id="lightbox" onclick="cerrarLightbox()">
+  <img src="" alt="Código QR Ampliado" id="qr-ampliado">
 </div>
 
 

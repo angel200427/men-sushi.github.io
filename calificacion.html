@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⭐ Califícanos</title>
+  <link rel="stylesheet" href="stylesCalificacion.css">
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⭐ Califica tu Experiencia</h1>
+      <a href="index.html" class="boton-regreso">⬅️ Volver al Inicio</a>
+    </header>
+
+    <form id="formularioCalificacion" class="formulario-calificacion">
+      <h2>🍣 ¿Qué te pareció la comida?</h2>
+      <label><input type="radio" name="comida" value="5"> ⭐⭐⭐⭐⭐ Excelente</label><br>
+      <label><input type="radio" name="comida" value="4"> ⭐⭐⭐⭐ Muy buena</label><br>
+      <label><input type="radio" name="comida" value="3"> ⭐⭐⭐ Buena</label><br>
+      <label><input type="radio" name="comida" value="2"> ⭐⭐ Regular</label><br>
+      <label><input type="radio" name="comida" value="1"> ⭐ Mala</label><br><br>
+
+      <h2>🧑‍🍳 ¿Qué te pareciól servicio?</h2>
+      <label><input type="radio" name="servicio" value="5"> ⭐⭐⭐⭐⭐ Excelente</label><br>
+      <label><input type="radio" name="servicio" value="4"> ⭐⭐⭐⭐ Muy bueno</label><br>
+      <label><input type="radio" name="servicio" value="3"> ⭐⭐⭐ Bueno</label><br>
+      <label><input type="radio" name="servicio" value="2"> ⭐⭐ Regular</label><br>
+      <label><input type="radio" name="servicio" value="1"> ⭐ Malo</label><br><br>
+
+      <textarea id="comentarios" placeholder="Déjanos tus comentarios..." rows="4" cols="40"></textarea><br><br>
+      <button type="submit">Enviar Calificación</button>
+    </form>
+
+   </form>
+
+<!-- Separación entre botones -->
+<div style="height: 30px;"></div>
+
+<!-- Botón para ver respuestas (inicialmente oculto) -->
+<div class="boton-centro">
+  <button id="verRespuestas" style="display: none;">👀 Ver Respuestas</button>
+</div>
+
+<!-- Contenedor de respuestas -->
+<div id="respuestasGuardadas" style="margin-top: 20px;"></div>
+    <script src="calificacion.js"></script>
+
+</body>
+</html>

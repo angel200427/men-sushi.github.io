@@ -46,3 +46,4 @@ document.addEventListener("DOMContentLoaded", () => {
 function cerrarModal() {
   document.getElementById("modalImagen").style.display = "none";
 }
+

@@ -284,3 +284,68 @@ body {
   box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);
   background: rgba(255, 102, 0, 0.2);
 }
+/* Botón de mostrar menú de rollos */
+#toggleMenu {
+  width: 250px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffa600;
+  color: white;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#toggleMenu:hover {
+  background-color: #ff8800;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 14px rgba(255, 165, 0, 0.5);
+}
+
+/* Menú oculto / animación */
+.menu {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.8s ease, opacity 0.8s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-top: 1rem;
+  padding: 0 1rem;
+  border-radius: 15px;
+  color: #fff;
+}
+
+/* Clase visible activa el contenido */
+.menu.visible {
+  max-height: 2000px;
+  opacity: 1;
+  padding: 1.5rem;
+}
+
+/* Estilo de encabezados dentro del menú */
+.menu h2 {
+  color: #ffa600;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  text-shadow: 0 0 4px #000;
+}
+
+/* Lista del menú */
+.menu ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.menu li strong {
+  color: #ff4d4f;
+}

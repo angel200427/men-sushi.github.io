@@ -8,3 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   });
 });
+ function copiarTexto(id) {
+    const texto = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(texto).then(() => {
+      alert("Número copiado: " + texto);
+    });
+  }
+  function mostrarLightbox(src) {
+    document.getElementById('qr-ampliado').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function cerrarLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
