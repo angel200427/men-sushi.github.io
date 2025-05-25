@@ -46,4 +46,27 @@ document.addEventListener("DOMContentLoaded", () => {
 function cerrarModal() {
   document.getElementById("modalImagen").style.display = "none";
 }
+ // Modal para videos
+  const modalVideo = document.getElementById("modalVideo");
+  const videoAmpliado = document.getElementById("videoAmpliado");
 
+  document.querySelectorAll(".galeria-grid video").forEach(video => {
+    video.addEventListener("click", () => {
+      videoAmpliado.src = video.src;
+      videoAmpliado.play();
+      modalVideo.style.display = "block";
+    });
+  });
+
+  function cerrarModalVideo() {
+    modalVideo.style.display = "none";
+    videoAmpliado.pause();
+    videoAmpliado.currentTime = 0;
+  }
+
+  // Cierra el modal al hacer clic fuera del video
+  window.addEventListener("click", (e) => {
+    if (e.target === modalVideo) {
+      cerrarModalVideo();
+    }
+  });

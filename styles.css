@@ -375,3 +375,105 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 
+.galeria-grid video {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.galeria-grid video:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para modal de video */
+.modal-video {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-video-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  border-radius: 16px;
+}
+.cerrar-modal-video {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.boton-tiktok {
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.boton-tiktok::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(45deg, #fe2c55, #25f4ee);
+  transition: all 0.75s ease;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.boton-tiktok:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.boton-tiktok:hover {
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.boton-tiktok span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animación de aparición desde abajo */
+.animado {
+  animation: aparecerDesdeAbajo 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes aparecerDesdeAbajo {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
