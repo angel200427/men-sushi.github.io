@@ -170,3 +170,18 @@ button[type="submit"]:hover {
     filter: brightness(1);
   }
 }
+.estrella {
+  font-size: 1.5em;
+}
+
+.estrellas-resumen .nivel-alto {
+  color: gold;
+}
+
+.estrellas-resumen .nivel-medio {
+  color: orange;
+}
+
+.estrellas-resumen .nivel-bajo {
+  color: tomato;
+}
