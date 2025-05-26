@@ -42,11 +42,11 @@ form.addEventListener("submit", function (e) {
 
   db.collection("calificaciones").add(nuevaRespuesta)
     .then(() => {
-      alert("✅ ¡Gracias por tu calificación!");
-      form.reset();
-      mostrarEstrellasResumen(comida.value, servicio.value);
-      verRespuestas(); // actualizar respuestas después de enviar
-    })
+  form.reset();
+  mostrarEstrellasResumen(comida.value, servicio.value);
+  verRespuestas(); // actualizar respuestas después de enviar
+})
+
     .catch((error) => {
       console.error("Error al guardar en Firebase:", error);
       alert("❌ Hubo un problema al enviar tu calificación.");
