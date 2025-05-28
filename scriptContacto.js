@@ -22,9 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function cerrarLightbox() {
     document.getElementById('lightbox').style.display = 'none';
   }
-   document.getElementById('whatsapp-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Evita que se recargue la página
-
+document.getElementById('whatsapp-form').addEventListener('submit', function (e) {
+    e.preventDefault();
     // Obtener datos del formulario
     const nombre = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;

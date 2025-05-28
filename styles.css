@@ -485,3 +485,99 @@ body {
     transform: translateY(0);
   }
 }
+/* Centrado y animación del título de la sección de videos */
+.titulo-galeria.animacion-titulo {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #ffa600;
+  font-weight: bold;
+  animation: flotar 3s ease-in-out infinite, fadeSlideDown 1.2s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animaciones para los videos */
+.animado-video {
+  opacity: 0;
+  animation: aparecerVideo 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes aparecerVideo {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* También puedes agregar esto para animación escalonada si quieres */
+.galeria-grid-videos .animado-video:nth-child(1) { animation-delay: 0.1s; }
+.galeria-grid-videos .animado-video:nth-child(2) { animation-delay: 0.2s; }
+.galeria-grid-videos .animado-video:nth-child(3) { animation-delay: 0.3s; }
+.galeria-grid-videos .animado-video:nth-child(4) { animation-delay: 0.4s; }
+.galeria-grid-videos .animado-video:nth-child(5) { animation-delay: 0.5s; }
+.galeria-grid-videos .animado-video:nth-child(6) { animation-delay: 0.6s; }
+.galeria-grid-videos .animado-video:nth-child(7) { animation-delay: 0.7s; }
+.galeria-grid-videos .animado-video:nth-child(8) { animation-delay: 0.8s; }
+/* Contenedor animado TikTok */
+.animado-tiktok {
+  text-align: center;
+  padding: 1rem;
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+/* Animación para título */
+.titulo-tiktok {
+  font-size: 2.5rem;
+  color: #ff0050;
+  animation: flotar 3s ease-in-out infinite, aparecerDesdeAbajo 1.2s ease forwards;
+  font-weight: bold;
+  margin-bottom: 10px;
+  opacity: 0;
+}
+
+/* Animación para párrafo */
+.texto-tiktok {
+  font-size: 1.1rem;
+  color: #eaeaea;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+/* Animación botón TikTok */
+.animado-boton {
+  display: inline-block;
+  margin-top: 10px;
+  animation: rebotar 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes rebotar {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
