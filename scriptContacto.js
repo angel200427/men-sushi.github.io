@@ -22,3 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
   function cerrarLightbox() {
     document.getElementById('lightbox').style.display = 'none';
   }
+   document.getElementById('whatsapp-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita que se recargue la página
+
+    // Obtener datos del formulario
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    // Número de WhatsApp (formato internacional sin + ni espacios)
+    const numeroWhatsApp = "593978839941"; // Reemplaza con tu número
+
+    // Construir mensaje
+    const texto = `Hola, soy ${nombre} (%0AEmail: ${email})%0A%0A${mensaje}`;
+
+    // Redirigir a WhatsApp
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+  });
