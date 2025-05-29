@@ -581,3 +581,14 @@ body {
     opacity: 1;
   }
 }
+ .zoom-icon {
+    width: 90px;
+    height: 90px;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .zoom-icon:active {
+    transform: scale(2); /* Se agranda al hacer clic */
+  }

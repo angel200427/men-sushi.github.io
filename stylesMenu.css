@@ -322,3 +322,16 @@ header {
     transform: scale(1) rotate(0deg);
   }
 }
+ .zoom-icon {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    margin-left: 35px; /* Aumenta este valor para más separación */
+
+  }
+
+  .zoomed {
+    transform: scale(2);
+  }
