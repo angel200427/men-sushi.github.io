@@ -1,46 +1,89 @@
-/* Fondo general */
+/* ---------------------------------- */
+/* GENERAL                           */
+/* ---------------------------------- */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #000;
-    color: #fff;
-    background-image: url('img/sushiiifondoo.jpg'); /* Tu fondo negro personalizado */
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-  }
-  
-  /* Contenedor principal */
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.7); /* Oscurece ligeramente para contraste */
-    border-radius: 20px;
-    animation: fadeIn 1s ease-in-out;
-  }
-  
-  /* Animación de aparición */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Logo */
- /* Centrar logo y título */
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+  background-image: url('img/sushiiifondoo.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ---------------------------------- */
+/* ANIMACIONES GENERALES             */
+/* ---------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes aparecerDesdeAbajo {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rebotar {
+  0%   { transform: translateY(20px); opacity: 0; }
+  50%  { transform: translateY(-8px); opacity: 0.6; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes expandUnderline {
+  0%, 100% { width: 60px; }
+  50%      { width: 100px; }
+}
+
+@keyframes fadeSlideDown {
+  0%   { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes aparecerVideo {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* ---------------------------------- */
+/* HEADER                            */
+/* ---------------------------------- */
 .logo-header {
   text-align: center;
   margin: 20px 0;
 }
 
-/* Logo redondo con animación */
 .logo {
   width: 150px;
   height: 150px;
@@ -56,7 +99,12 @@ body {
   box-shadow: 0 0 30px rgba(255, 77, 79, 0.8);
 }
 
-/* Título animado */
+@keyframes zoomGiro {
+  0%   { transform: scale(0) rotate(-180deg); opacity: 0; }
+  60%  { transform: scale(1.1) rotate(20deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0); }
+}
+
 .titulo-principal {
   font-size: 3rem;
   margin-top: 10px;
@@ -68,81 +116,56 @@ body {
   letter-spacing: 1px;
 }
 
-/* Animación del logo */
-@keyframes zoomGiro {
-  0% {
-    transform: scale(0) rotate(-180deg);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.1) rotate(20deg);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1) rotate(0);
-  }
+@keyframes aparecerTexto {
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Animación del texto */
-@keyframes aparecerTexto {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ---------------------------------- */
+/* DESCRIPCIÓN                       */
+/* ---------------------------------- */
+.descripcion p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #eaeaea;
+  margin-top: 1rem;
 }
-  
-  /* Descripción */
-  .descripcion p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #eaeaea;
-    margin-top: 1rem;
-  }
-  
-  /* Botones de navegación */
-  .botones-navegacion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    animation: fadeInUp 1s ease-in-out;
-  }
-  
-  /* Animación de entrada */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .botones-navegacion button {
-    width: 250px;
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
-    border: none;
-    background-color: #ffb347;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  .botones-navegacion button:hover {
-    background-color: #e28e33;
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 12px rgba(255, 179, 71, 0.4);
-  }
-  
-  /* Galería de fotos y videos */
- .galeria-grid {
+
+/* ---------------------------------- */
+/* BOTONES DE NAVEGACIÓN             */
+/* ---------------------------------- */
+.botones-navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.botones-navegacion button {
+  width: 250px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #ffb347;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.botones-navegacion button:hover {
+  background-color: #e28e33;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 12px rgba(255, 179, 71, 0.4);
+}
+
+/* ---------------------------------- */
+/* GALERÍA IMÁGENES                  */
+/* ---------------------------------- */
+.galeria-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -164,83 +187,34 @@ body {
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
-/* Lightbox modal styles */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.3);
-  animation: zoomIn 0.4s ease;
-}
-
-@keyframes zoomIn {
-  from {transform: scale(0.8);}
-  to {transform: scale(1);}
-}
-
-.close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Responsive tweaks */
 @media (min-width: 1024px) {
-  .galeria-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
+  .galeria-grid { grid-template-columns: repeat(6, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .galeria-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  .galeria-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (max-width: 480px) {
-  .galeria-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .galeria-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-
-/* Modal */
-.modal {
-  display: none; 
+/* ---------------------------------- */
+/* MODAL IMÁGENES                    */
+/* ---------------------------------- */
+.lightbox, .modal {
+  display: none;
   position: fixed;
   z-index: 999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
   background-color: rgba(0,0,0,0.8);
-  animation: fadeInModal 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
 }
 
-.modal-contenido {
+.lightbox-content, .modal-contenido {
   margin: auto;
   display: block;
   max-width: 90%;
@@ -250,10 +224,10 @@ body {
   animation: zoomIn 0.4s ease;
 }
 
-.cerrar {
+.close, .cerrar {
   position: absolute;
-  top: 20px;
-  right: 35px;
+  top: 30px;
+  right: 40px;
   color: #fff;
   font-size: 40px;
   font-weight: bold;
@@ -261,39 +235,23 @@ body {
   transition: color 0.3s;
 }
 
-.cerrar:hover {
+.cerrar:hover, .close:hover {
   color: #ff4d4f;
 }
 
-/* Animaciones */
-@keyframes zoomIn {
-  from {transform: scale(0.8); opacity: 0;}
-  to {transform: scale(1); opacity: 1;}
-}
-
-@keyframes fadeInModal {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
+/* ---------------------------------- */
+/* TÍTULOS CON ANIMACIÓN             */
+/* ---------------------------------- */
 .titulo-galeria {
   text-align: center;
   font-size: 2.5rem;
   margin: 30px 0;
   color: #ffa600;
   animation: flotar 3s ease-in-out infinite;
-  position: relative;
   font-weight: bold;
+  position: relative;
 }
 
-/* Animación suave de flotación */
-@keyframes flotar {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
 .titulo-galeria::after {
   content: "";
   display: block;
@@ -305,18 +263,15 @@ body {
   animation: expandUnderline 2s ease-in-out infinite;
 }
 
-@keyframes expandUnderline {
-  0%, 100% {
-    width: 60px;
-  }
-  50% {
-    width: 100px;
-  }
+.titulo-galeria.animacion-titulo {
+  font-size: 2.8rem;
+  animation: flotar 3s ease-in-out infinite, fadeSlideDown 1.2s ease-in-out;
 }
 
-  
-  /* Botón de compartir */
- .contenedor-compartir {
+/* ---------------------------------- */
+/* BOTÓN COMPARTIR                   */
+/* ---------------------------------- */
+.contenedor-compartir {
   position: fixed;
   top: 20px;
   left: 20px;
@@ -364,64 +319,106 @@ body {
   display: none;
   margin-top: 10px;
   width: 150px;
-  animation: fadeIn 0.3s ease-in-out;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Animación */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
+/* ---------------------------------- */
+/* GALERÍA DE VIDEOS                 */
+/* ---------------------------------- */
 .galeria-grid-videos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .video-cuadrado {
-  aspect-ratio: 1/1;
   width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 10px;
   cursor: pointer;
+  border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
 .video-cuadrado:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* Modal para video */
 .modal-video {
   display: none;
   position: fixed;
   z-index: 9999;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
   align-items: center;
+  justify-content: center;
 }
 
 .modal-video video {
   max-width: 90%;
-  max-height: 80vh;
-  border-radius: 15px;
+  max-height: 80%;
+  border-radius: 10px;
 }
 
 .cerrar-video {
   position: absolute;
   top: 20px;
   right: 30px;
-  font-size: 40px;
+  font-size: 3rem;
   color: white;
   cursor: pointer;
   z-index: 10000;
+}
+
+/* Animaciones de aparición escalonada */
+.animado-video {
+  opacity: 0;
+  animation: aparecerVideo 1s ease forwards;
+}
+.galeria-grid-videos .animado-video:nth-child(1) { animation-delay: 0.1s; }
+.galeria-grid-videos .animado-video:nth-child(2) { animation-delay: 0.2s; }
+.galeria-grid-videos .animado-video:nth-child(3) { animation-delay: 0.3s; }
+.galeria-grid-videos .animado-video:nth-child(4) { animation-delay: 0.4s; }
+.galeria-grid-videos .animado-video:nth-child(5) { animation-delay: 0.5s; }
+.galeria-grid-videos .animado-video:nth-child(6) { animation-delay: 0.6s; }
+
+/* ---------------------------------- */
+/* TIKTOK SECTION                    */
+/* ---------------------------------- */
+.animado-tiktok {
+  text-align: center;
+  padding: 1rem;
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+.titulo-tiktok {
+  font-size: 2.5rem;
+  color: #ff0050;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: flotar 3s ease-in-out infinite, aparecerDesdeAbajo 1.2s ease forwards;
+  opacity: 0;
+}
+
+.texto-tiktok {
+  font-size: 1.1rem;
+  color: #eaeaea;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+.animado-boton {
+  display: inline-block;
+  margin-top: 10px;
+  animation: rebotar 1.5s ease forwards;
+  opacity: 0;
 }
 
 .boton-tiktok {
@@ -467,117 +464,4 @@ body {
 .boton-tiktok span {
   position: relative;
   z-index: 1;
-}
-
-/* Animación de aparición desde abajo */
-.animado {
-  animation: aparecerDesdeAbajo 1s ease forwards;
-  opacity: 0;
-}
-
-@keyframes aparecerDesdeAbajo {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Centrado y animación del título de la sección de videos */
-.titulo-galeria.animacion-titulo {
-  text-align: center;
-  font-size: 2.8rem;
-  color: #ffa600;
-  font-weight: bold;
-  animation: flotar 3s ease-in-out infinite, fadeSlideDown 1.2s ease-in-out;
-  margin-bottom: 1rem;
-}
-
-@keyframes fadeSlideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animaciones para los videos */
-.animado-video {
-  opacity: 0;
-  animation: aparecerVideo 1s ease forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes aparecerVideo {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* También puedes agregar esto para animación escalonada si quieres */
-.galeria-grid-videos .animado-video:nth-child(1) { animation-delay: 0.1s; }
-.galeria-grid-videos .animado-video:nth-child(2) { animation-delay: 0.2s; }
-.galeria-grid-videos .animado-video:nth-child(3) { animation-delay: 0.3s; }
-.galeria-grid-videos .animado-video:nth-child(4) { animation-delay: 0.4s; }
-.galeria-grid-videos .animado-video:nth-child(5) { animation-delay: 0.5s; }
-.galeria-grid-videos .animado-video:nth-child(6) { animation-delay: 0.6s; }
-.galeria-grid-videos .animado-video:nth-child(7) { animation-delay: 0.7s; }
-.galeria-grid-videos .animado-video:nth-child(8) { animation-delay: 0.8s; }
-/* Contenedor animado TikTok */
-.animado-tiktok {
-  text-align: center;
-  padding: 1rem;
-  animation: fadeInUp 1.2s ease-out forwards;
-  opacity: 0;
-}
-
-/* Animación para título */
-.titulo-tiktok {
-  font-size: 2.5rem;
-  color: #ff0050;
-  animation: flotar 3s ease-in-out infinite, aparecerDesdeAbajo 1.2s ease forwards;
-  font-weight: bold;
-  margin-bottom: 10px;
-  opacity: 0;
-}
-
-/* Animación para párrafo */
-.texto-tiktok {
-  font-size: 1.1rem;
-  color: #eaeaea;
-  animation: fadeIn 1.5s ease forwards;
-  opacity: 0;
-}
-
-/* Animación botón TikTok */
-.animado-boton {
-  display: inline-block;
-  margin-top: 10px;
-  animation: rebotar 1.5s ease forwards;
-  opacity: 0;
-}
-
-@keyframes rebotar {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(-8px);
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
