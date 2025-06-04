@@ -346,4 +346,212 @@ header {
   justify-content: space-between;
   padding: 8px 0;
 }
+.menu-bebidas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fefefe;
+        border-radius: 12px;
+        font-family: 'Segoe UI', sans-serif;
+    }
 
+    .item {
+        display: flex;
+        justify-content: space-between;
+        background: #000000;
+        padding: 10px 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease;
+    }
+
+    .item:hover {
+        transform: scale(1.02);
+        background-color: #f5df1a;
+    }
+
+    .nombre {
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .precios {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #f05812;
+    }
+.menu-hamburguesas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.menu-hamburguesas .item {
+  display: flex;
+  justify-content: space-between;
+  background: #000000;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.menu-hamburguesas .item:hover {
+  transform: scale(1.02);
+  background-color: #e6d818;
+}
+
+.menu-hamburguesas .nombre {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.menu-hamburguesas .precios {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #f05812;
+  margin-left: 10px;
+}
+.menu-ramen {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.menu-ramen .item {
+  display: flex;
+  justify-content: space-between;
+  background: #000000;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.menu-ramen .item:hover {
+  transform: scale(1.02);
+  background-color: #f5e61e;
+}
+
+.menu-ramen .nombre {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.menu-ramen .precios {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #f05812;
+  margin-left: 10px;
+}
+.menu-ensaladas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.menu-ensaladas .item {
+  display: flex;
+  justify-content: space-between;
+  background: #000000;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.menu-ensaladas .item:hover {
+  transform: scale(1.02);
+  background-color: #e7d911;
+}
+
+.menu-ensaladas .nombre {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.menu-ensaladas .precios {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #f05812;
+  margin-left: 10px;
+}
+.menu-ensaladas .descripcion {
+  font-size: 0.9rem;
+  color: #dddddd;
+  margin-top: 5px;
+}
+
+.menu-pone {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.menu-pone .item {
+  display: flex;
+  justify-content: space-between;
+  background: #000000;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.menu-pone .item:hover {
+  transform: scale(1.02);
+  background-color: #ebd514;
+}
+
+.menu-pone .nombre {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.menu-pone .precios {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #f05812;
+  margin-left: 10px;
+}
+.menu-pone .descripcion {
+  font-size: 0.9rem;
+  color: #dddddd;
+  margin-top: 5px;
+}
