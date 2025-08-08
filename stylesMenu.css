@@ -2,7 +2,7 @@
 :root {
   --color-primario: #f16522;
   --color-secundario: #ffa600;
-  --color-texto-claro: #fff;
+  --color-texto-claro: #ffffff;
   --color-texto-oscuro: #333;
   --color-acento: #ff4d4f;
 }
@@ -40,7 +40,7 @@ body.tablas-page {
   background: url('fondo-tablas.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Poppins', sans-serif;
-  color: #ebe7e7;
+  color: #958f8f;
 }
 
 /* ==================== ENCABEZADO ==================== */
@@ -100,7 +100,7 @@ header {
   border: none;
   border-radius: 10px;
   background-color: var(--color-secundario);
-  color: white;
+  color: rgb(17, 16, 16);
   cursor: pointer;
   margin: 20px auto;
   display: block;
@@ -166,7 +166,7 @@ header {
 
 .contenedor-tablas {
   padding: 2rem;
-  background: linear-gradient(to bottom right, #050505, #000000);
+  background: linear-gradient(to bottom right, #000000, #424040);
   animation: fadeIn 1.5s ease-in;
 }
 
@@ -177,13 +177,14 @@ header {
 }
 
 .tarjeta-tabla {
-  background-color: rgb(219, 216, 216);
+  background-color: rgb(250, 248, 248);
   padding: 1.5rem;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgb(255, 208, 0);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   animation: zoomIn 0.6s ease forwards;
   opacity: 0;
+  color: #000000 !important; /* Texto negro por defecto */
 }
 
 .tarjeta-tabla:hover {
@@ -194,7 +195,7 @@ header {
 .tarjeta-tabla h2 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  color: var(--color-texto-oscuro);
+  color: #000000 !important;
 }
 
 .alineado {
@@ -208,7 +209,7 @@ header {
   justify-content: space-between;
   margin-bottom: 0.4rem;
   font-weight: 500;
-  color: #d85026;
+  color: #000000 !important; /* Los elementos de la lista en negro */
 }
 
 .cantidad {
@@ -216,15 +217,20 @@ header {
   text-align: right;
   margin-right: 1rem;
   font-weight: bold;
-  color: #772525;
+  color: #772525 !important; /* Marrón oscuro */
+}
+
+.nombre {
+  color: #000000 !important; /* Negro absoluto */
+  font-weight: 500;
 }
 
 .precio {
   display: inline-block;
   font-size: 1.3rem;
   font-weight: bold;
-  color: white;
-  background-color: #0d0d0e;
+  color: rgb(13, 13, 13) !important;
+  background-color: #e8e8ef;
   padding: 0.5rem 1rem;
   border-radius: 12px;
   transition: background-color 0.3s ease;
@@ -233,6 +239,7 @@ header {
 .precio:hover {
   background-color: #f31111;
 }
+
 
 /* Animación delay individual */
 .tarjeta-tabla:nth-child(1) { animation-delay: 0.1s; }
@@ -353,7 +360,7 @@ header {
         max-width: 500px;
         margin: 0 auto;
         padding: 20px;
-        background-color: #fefefe;
+        background-color: #000000;
         border-radius: 12px;
         font-family: 'Segoe UI', sans-serif;
     }
@@ -361,10 +368,10 @@ header {
     .item {
         display: flex;
         justify-content: space-between;
-        background: #000000;
+        background: #faf4f4;
         padding: 10px 15px;
         border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 4px rgba(244, 241, 241, 0.1);
         transition: transform 0.2s ease;
     }
 
@@ -390,7 +397,7 @@ header {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fefefe;
+  background-color: #070707;
   border-radius: 12px;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -398,10 +405,10 @@ header {
 .menu-hamburguesas .item {
   display: flex;
   justify-content: space-between;
-  background: #000000;
+  background: #ece9e9;
   padding: 10px 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgb(0, 0, 0);
   transition: transform 0.2s ease;
 }
 
@@ -412,7 +419,7 @@ header {
 
 .menu-hamburguesas .nombre {
   font-weight: 600;
-  color: #ffffff;
+  color: #fffefe;
   font-size: 1rem;
   flex: 1;
 }
@@ -420,7 +427,7 @@ header {
 .menu-hamburguesas .precios {
   font-size: 1.3em;
   font-weight: bold;
-  color: #f05812;
+  color: #dd3d15;
   margin-left: 10px;
 }
 .menu-ramen {
@@ -438,10 +445,10 @@ header {
 .menu-ramen .item {
   display: flex;
   justify-content: space-between;
-  background: #000000;
+  background: #e1e0e0;
   padding: 10px 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgb(0, 0, 0);
   transition: transform 0.2s ease;
 }
 
@@ -487,7 +494,7 @@ header {
 
 .menu-ensaladas .item:hover {
   transform: scale(1.02);
-  background-color: #e7d911;
+  background-color: #00b7f9;
 }
 
 .menu-ensaladas .nombre {
@@ -534,12 +541,12 @@ header {
 
 .menu-pone .item:hover {
   transform: scale(1.02);
-  background-color: #ebd514;
+  background-color: #06b1e1;
 }
 
 .menu-pone .nombre {
   font-weight: 600;
-  color: #ffffff;
+  color: #050505;
   font-size: 1rem;
   flex: 1;
 }
@@ -552,7 +559,7 @@ header {
 }
 .menu-pone .descripcion {
   font-size: 0.9rem;
-  color: #dddddd;
+  color: #ffffff;
   margin-top: 5px;
 }
 .promociones-seccion {
