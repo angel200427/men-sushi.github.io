@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍣 Sushi Land</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo redondo -->
+   <header class="logo-header centrado">
+  <img src="img/sushi logo.jpg" alt="Logo Sushi Land" class="logo" />
+  <h1 class="titulo-principal">Sushi Land</h1>
+</header>
+
+    
+
+    <!-- Descripción -->
+    <section class="descripcion">
+      <p>
+        Bienvenidos a <strong>Sushi Land</strong>, tu rincón de sabor asiático con un toque tropical. Disfruta de rollos artesanales,
+        ramen reconfortante, sushi burgers únicas y ensaladas frescas. Perfecto para compartir en familia o con amigos.
+        ¡Te esperamos con los palillos abiertos!
+      </p>
+    </section>
+
+    <!-- Botones -->
+  <section class="botones-navegacion">
+  <button onclick="window.location.href = 'menu.html'">📄 Menú</button>
+  <button onclick="window.location.href = 'calificacion.html'">⭐ Califícanos</button> <!-- 👈 Nuevo botón -->
+  <button onclick="window.location.href = 'Ubicacion.html'">📍 Ubicación y Horarios</button>
+  <button onclick="window.location.href = 'pedidos.html'">🛒 Pedidos a Domicilio</button>
+  <button onclick="window.location.href = 'reserva.html'">📝 Reserva tu Mesa</button>
+  <button onclick="window.location.href = 'contacto.html'">📧 Contactar</button>
+    </section>
+
+    <!-- Galería -->
+    <section class="galeria">
+      <!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" />
+</div>
+
+      <h2 class="titulo-galeria">Galería de Fotos</h2>
+  <div class="galeria-grid">
+<img src="img/sushi2.jpg" alt="Rollo de sushi" />
+<img src="img/hamburguesa.jpg" alt="Sushi Burger" />
+<img src="img/ensalada.jpg" alt="Ensalada" />
+<img src="img/ramen1.jpg" alt="Ramen delicioso" />
+<img src="img/momentos2.jpg" alt="Ramen delicioso" />
+<img src="img/momentos.jpg" alt="Ramen delicioso" />
+<img src="img/momentos1.jpg" alt="Ramen delicioso" />
+<img src="img/momentos3.jpg" alt="Ramen delicioso" />
+<img src="img/momentos4.jpg" alt="Ramen delicioso" />
+<img src="img/momentos5.jpg" alt="Ramen delicioso" />
+<img src="img/momentos6.jpg" alt="Ramen delicioso" />
+<img src="img/momentos7.jpg" alt="Ramen delicioso" />
+<img src="img/momentos8.jpg" alt="Ramen delicioso" />
+<img src="img/momentos9.jpg" alt="Ramen delicioso" />
+<img src="img/momentos10.jpg" alt="Ramen delicioso" />
+      
+</div>
+    </section>
+
+<!-- Modal para ampliar imagen -->
+<div id="modalImagen" class="modal">
+  <span class="cerrar" onclick="cerrarModal()">&times;</span>
+  <img class="modal-contenido" id="imgAmpliada" />
+</div>
+
+    <section class="galeria">
+  <h2 class="titulo-galeria animacion-titulo">🎥 Videos del Local</h2>
+  <div class="galeria-grid-videos">
+    <video src="video/video1.mp4" muted playsinline class="video-cuadrado animado-video" onclick="ampliarVideo(this)"></video>
+    <video src="video/video2.mp4" muted playsinline class="video-cuadrado animado-video" onclick="ampliarVideo(this)"></video>
+    <video src="video/video3.mp4" muted playsinline class="video-cuadrado animado-video" onclick="ampliarVideo(this)"></video>
+    <video src="video/video4.mp4" muted playsinline class="video-cuadrado animado-video" onclick="ampliarVideo(this)"></video>
+    <video src="video/video5.mp4" muted playsinline class="video-cuadrado animado-video" onclick="ampliarVideo(this)"></video>
+    <video src="video/video6.mp4" muted playsinline class="video-cuadrado animado-video" onclick="ampliarVideo(this)"></video>
+    <video src="video/video7.mp4" muted playsinline class="video-cuadrado animado-video" onclick="ampliarVideo(this)"></video>
+    <video src="video/video8.mp4" muted playsinline class="video-cuadrado animado-video" onclick="ampliarVideo(this)"></video>
+  </div>
+</section>
+<!-- Modal para video ampliado -->
+<div id="videoModal" class="modal-video">
+  <span class="cerrar-video" onclick="cerrarVideoModal()">&times;</span>
+  <video id="videoAmpliado" controls autoplay></video>
+</div>
+    </section>
+<!-- TikTok -->
+<section class="tiktok-seguir centrado animado-tiktok" style="margin-top: 40px;">
+  <h2 class="titulo-tiktok">🕺 ¡Síguenos en TikTok!</h2>
+<p class="texto-tiktok">¿Te gusta el sushi? ¿Y reírte también? Perfecto, este TikTok es para ti. 🎥🍣🤪</p>
+  <a href="https://www.tiktok.com/@sushiland89?_t=ZM-8wfNalfFBjx&_r=1" target="_blank" class="boton-tiktok animado-boton">📲 Ver más contenido y síguenos</a><br>
+  <a href="https://www.tiktok.com/@angel_vargas_vc?_t=ZM-8wdnkcRYame&_r=1s" target="_blank" class="boton-tiktok animado-boton">📲 Ver más contenido y síguenos</a>
+</section>
+    <!-- Botón de compartir -->
+ <div class="contenedor-compartir">
+  <button class="boton-compartir" onclick="toggleOpciones()">💌 Compartir</button>
+
+  <div class="opciones-compartir" id="opcionesCompartir">
+     <button onclick="toggleQR()">📸 Menú QR</button>
+       <img id="qrImage" src="img/frame (4).png" alt="QR del Menú">
+    <button onclick="copiarLink()">🔗 Copiar Link</button>
+    <button onclick="descargarQR()">⬇️ Descargar QR</button>
+       <a id="linkDescargaQR" href="img/frame (4).png" download="frame (4).png" style="display: none;"></a>
+    <button onclick="compartirFacebook()">💙 Facebook</button>
+    <button onclick="compartirWhatsApp()">📱 WhatsApp</button>
+  </div>
+
+</div>
+  </div>
+  
+</body>
+</html>
