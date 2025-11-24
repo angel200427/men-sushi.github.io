@@ -1,45 +1,47 @@
- document.addEventListener("DOMContentLoaded", function () {
-      const toggleButton = document.getElementById("toggleMenu");
-      const menuContent = document.getElementById("menuContent");
+document.addEventListener("DOMContentLoaded", function () {
 
-      // Ocultamos el menú al principio
-      menuContent.classList.remove("visible");
+  // ---- Botón "Ver tipos de rollos" ----
+  const toggleButton = document.getElementById("toggleMenu");
+  const menuContent = document.getElementById("menuContent");
 
-      toggleButton.addEventListener("click", function () {
-        menuContent.classList.toggle("visible");
-        toggleButton.textContent = menuContent.classList.contains("visible")
-          ? "Ocultar tipos de rollos"
-          : "Ver tipos de rollos";
-      });
-    });
-    function toggleZoom(img) {
-    img.classList.toggle("zoomed");
-  }
-  document.addEventListener('DOMContentLoaded', function () {
-    const diaSemana = new Date().getDay(); // 0=Domingo, 1=Lunes, ..., 6=Sábado
+  // Ocultar al inicio
+  menuContent.style.display = "none";
 
-    const clasesPromos = {
-      3: 'promo-miercoles',
-      4: 'promo-jueves',
-      5: 'promo-viernes',
-      6: 'promo-sabado',
-      0: 'promo-domingo'
-    };
-
-    // Ocultar todos los grupos de promociones primero
-    document.querySelectorAll('.grupo-promos').forEach(grupo => {
-      grupo.style.display = 'none';
-    });
-
-    // Mostrar solo las promociones del día actual
-    const claseHoy = clasesPromos[diaSemana];
-    if (claseHoy) {
-      const promosHoy = document.querySelector('.' + claseHoy);
-      if (promosHoy) {
-        promosHoy.style.display = 'flex';
-      }
+  toggleButton.addEventListener("click", function () {
+    if (menuContent.style.display === "none") {
+      menuContent.style.display = "block";
+      toggleButton.textContent = "Ocultar tipos de rollos";
     } else {
-      // Si no es un día con promociones, ocultamos la sección completa
-      document.getElementById('promociones').style.display = 'none';
+      menuContent.style.display = "none";
+      toggleButton.textContent = "Ver tipos de rollos";
     }
   });
+
+  // ---- Zoom imágenes ----
+  window.toggleZoom = function (img) {
+    img.classList.toggle("zoomed");
+  };
+
+  // ---- Promociones por día ----
+  const diaSemana = new Date().getDay(); // 0 Domingo, 1 Lunes, ...
+  const clasesPromos = {
+    3: "promo-miercoles",
+    4: "promo-jueves",
+    5: "promo-viernes",
+    6: "promo-sabado",
+    0: "promo-domingo",
+  };
+
+  document.querySelectorAll(".grupo-promos").forEach((grupo) => {
+    grupo.style.display = "none";
+  });
+
+  const claseHoy = clasesPromos[diaSemana];
+  if (claseHoy) {
+    const promosHoy = document.querySelector("." + claseHoy);
+    if (promosHoy) promosHoy.style.display = "flex";
+  } else {
+    const promoSection = document.getElementById("promociones");
+    if (promoSection) promoSection.style.display = "none";
+  }
+});

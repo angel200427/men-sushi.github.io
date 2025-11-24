@@ -1,589 +1,261 @@
-/* ==================== VARIABLES ==================== */
-:root {
-  --color-primario: #f16522;
-  --color-secundario: #ffa600;
-  --color-texto-claro: #ffffff;
-  --color-texto-oscuro: #333;
-  --color-acento: #ff4d4f;
-}
-
-/* ==================== ESTILOS GENERALES ==================== */
+/* ==================== ESTILO GENERAL ==================== */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('img/fondo-sushi.jpg') center/cover fixed;
   margin: 0;
   padding: 0;
-  color: var(--color-texto-claro);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+/* Filtro oscuro elegante */
+.background-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+
+/* Contenedor general */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  animation: fadeIn 1.2s ease;
+}
+
+/* ==================== LOGO Y TÍTULO ==================== */
+.logo-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-header img {
+  width: 150px;
+  border-radius: 100%;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  animation: float 4s ease-in-out infinite;
+}
+
+.logo-header h1 {
+  font-size: 2.5rem;
+  color: #ff3b41;
+  margin-top: 10px;
+  text-shadow: 0 0 12px #000;
+  animation: slideDown 1s ease;
+}
+
+/* ==================== BOTÓN REGRESO ==================== */
+.boton-regreso {
+   display: block;
+  background: #ff3b41;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 30px auto;
+  margin-bottom: 15px;
+  transition: .3s;
+  text-align: center;
+}
+
+.boton-regreso:hover {
+  background: #ff6267;
+  transform: scale(1.05);
+}
+
+/* ==================== PROMOCIONES ==================== */
+.promociones-seccion {
+  margin-bottom: 40px;
+}
+
+.titulo-promociones {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffd369;
+  margin-bottom: 15px;
+  text-shadow: 0 0 12px black;
+  animation: fadeInUp 1s ease;
+}
+
+.promociones-grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+  margin: 10px 0;
+  transition: transform .3s ease;
+}
+
+.promociones-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ==================== MENÚ GENERAL ==================== */
+.menu-general {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  animation: fadeIn 1s ease;
+}
+
+.titulo-seccion {
+  color: #ffd369;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 20px 0 10px;
+  text-shadow: 0 0 10px black;
+  animation: fadeInUp 0.8s ease;
+}
+
+.bloque-menu {
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.8s ease;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.15);
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: .3s ease;
+}
+
+.item span:first-child {
+  font-weight: 600;
+}
+
+.item span:last-child {
+  color: #ff3b41;
+  font-weight: bold;
+}
+
+.item:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.03);
+}
+
+/* ==================== BOTÓN DE TIPOS DE ROLLOS ==================== */
+#toggleMenu {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #ff3b41;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: .3s ease;
+}
+
+#toggleMenu:hover {
+  transform: scale(1.05);
+  background: #ff6267;
+}
+
+.menu {
+  background: rgba(0,0,0,0.65);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  animation: fadeIn 1s ease;
+}
+
+.menu h2 {
+  color: #ffd369;
+  margin-top: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.menu li {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  transition: .3s ease;
+}
+
+.menu li:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateX(5px);
+}
+
+/* ==================== ANIMACIONES ==================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+#toggleMenu {
+  font-size: 22px;
+  padding: 15px 25px;
+  background: #ff0055;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 15px #ff0055;
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
+  }
+  100% {
+    box-shadow: 0 0 25px #ff00ff, 0 0 40px #ff00dd;
+  }
+}
+
+#toggleMenu:hover {
+  transform: scale(1.05);
+}
+.tablas-page {
+  background-image: url("img/logo_de_madera.png"); /* CAMBIA este nombre por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   position: relative;
   min-height: 100vh;
 }
 
-body::before {
-  content: "";
+/* Capa oscura transparente para mayor contraste */
+.background-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('img/sushilogo.jpg');
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.5);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
   z-index: -1;
-}
-
-.container {
-  padding: 20px;
-}
-
-/* Página especial con fondo distinto */
-body.tablas-page {
-  background: url('fondo-tablas.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Poppins', sans-serif;
-  color: #958f8f;
-}
-
-/* ==================== ENCABEZADO ==================== */
-header {
-  background-color: rgba(0, 0, 0, 0.7);
-  text-align: center;
-  padding: 1em;
-  border-radius: 15px;
-}
-
-.logo-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.logo-header .logo {
-  width: 130px;
-  height: auto;
-  animation: entradaBrillante 1.8s ease-out forwards;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.1) rotate(3deg);
-  filter: brightness(1.3);
-}
-
-/* ==================== BOTÓN REGRESO ==================== */
-.boton-regreso {
-  display: block;
-  text-align: center;
-  margin: 2rem auto;
-  font-size: 1.1rem;
-  color: var(--color-texto-claro);
-  text-decoration: none;
-  background-color: #ffb347;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  width: fit-content;
-  transition: background 0.3s ease;
-}
-
-.boton-regreso:hover {
-  background-color: #e28e33;
-}
-
-/* ==================== SECCIÓN: MENÚ ==================== */
-#toggleMenu {
-  width: 250px;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 10px;
-  background-color: var(--color-secundario);
-  color: rgb(17, 16, 16);
-  cursor: pointer;
-  margin: 20px auto;
-  display: block;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  animation: fadeIn 1s ease-in-out;
-}
-
-#toggleMenu:hover {
-  background-color: #ff8800;
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 6px 14px rgba(255, 165, 0, 0.5);
-}
-
-.menu {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.8s ease, opacity 0.8s ease;
-  background-color: rgba(255, 255, 255, 0.05);
-  margin-top: 1rem;
-  padding: 0 1rem;
-  border-radius: 15px;
-  color: var(--color-texto-claro);
-}
-
-.menu.visible {
-  max-height: 2000px;
-  opacity: 1;
-  padding: 1.5rem;
-}
-
-.menu h2 {
-  color: var(--color-secundario);
-  font-size: 1.8rem;
-  margin-top: 1.5rem;
-  text-shadow: 0 0 4px #000;
-}
-
-.menu ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.menu li {
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-.menu li strong {
-  color: var(--color-acento);
-}
-
-/* ==================== TABLAS ==================== */
-.titulo-tablas {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #dd1010;
-  margin-bottom: 2rem;
-  animation: slideDown 1s ease-out;
-}
-
-.contenedor-tablas {
-  padding: 2rem;
-  background: linear-gradient(to bottom right, #000000, #424040);
-  animation: fadeIn 1.5s ease-in;
-}
-
-.tablas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.tarjeta-tabla {
-  background-color: rgb(250, 248, 248);
-  padding: 1.5rem;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgb(255, 208, 0);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: zoomIn 0.6s ease forwards;
-  opacity: 0;
-  color: #000000 !important; /* Texto negro por defecto */
-}
-
-.tarjeta-tabla:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-}
-
-.tarjeta-tabla h2 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  color: #000000 !important;
-}
-
-.alineado {
-  list-style: none;
-  padding: 1rem;
-  margin: 0 0 1rem 0;
-}
-
-.alineado li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.4rem;
-  font-weight: 500;
-  color: #000000 !important; /* Los elementos de la lista en negro */
-}
-
-.cantidad {
-  min-width: 30px;
-  text-align: right;
-  margin-right: 1rem;
-  font-weight: bold;
-  color: #772525 !important; /* Marrón oscuro */
-}
-
-.nombre {
-  color: #000000 !important; /* Negro absoluto */
-  font-weight: 500;
-}
-
-.precio {
-  display: inline-block;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: rgb(13, 13, 13) !important;
-  background-color: #e8e8ef;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  transition: background-color 0.3s ease;
-}
-
-.precio:hover {
-  background-color: #f31111;
-}
-
-
-/* Animación delay individual */
-.tarjeta-tabla:nth-child(1) { animation-delay: 0.1s; }
-.tarjeta-tabla:nth-child(2) { animation-delay: 0.2s; }
-.tarjeta-tabla:nth-child(3) { animation-delay: 0.3s; }
-.tarjeta-tabla:nth-child(4) { animation-delay: 0.4s; }
-.tarjeta-tabla:nth-child(5) { animation-delay: 0.5s; }
-.tarjeta-tabla:nth-child(6) { animation-delay: 0.6s; }
-.tarjeta-tabla:nth-child(7) { animation-delay: 0.7s; }
-
-/* ==================== POKE BOWLS ==================== */
-.poke-bowls {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-
-.poke-bowls li {
-  background: rgba(0, 0, 0, 0.5);
-  border-left: 6px solid var(--color-primario);
-  padding: 16px 20px;
-  margin-bottom: 16px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: white;
-  font-weight: 500;
-  animation: fadeIn 0.8s ease-out;
-}
-
-.poke-bowls li:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);
-  background: rgba(255, 102, 0, 0.2);
-}
-
-/* ==================== ANIMACIONES ==================== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes zoomIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes entradaBrillante {
-  0% {
-    transform: scale(0.5) rotate(-30deg);
-    opacity: 0;
-    filter: brightness(0.5);
-  }
-  50% {
-    transform: scale(1.2) rotate(15deg);
-    opacity: 1;
-    filter: brightness(1.2);
-  }
-  70% {
-    transform: scale(0.95) rotate(-5deg);
-    filter: brightness(1);
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-  }
-}
- .zoom-icon {
-    width: 100px;
-    height: 100px;
-    vertical-align: middle;
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    margin-left: 35px; /* Aumenta este valor para más separación */
-
-  }
-
-  .zoomed {
-    transform: scale(2);
-  }
-  .poke-bowls {
-  list-style: none;
-  padding: 0;
-}
-
-.ramen-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 0;
-}
-.menu-bebidas {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #000000;
-        border-radius: 12px;
-        font-family: 'Segoe UI', sans-serif;
-    }
-
-    .item {
-        display: flex;
-        justify-content: space-between;
-        background: #faf4f4;
-        padding: 10px 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(244, 241, 241, 0.1);
-        transition: transform 0.2s ease;
-    }
-
-    .item:hover {
-        transform: scale(1.02);
-        background-color: #f5df1a;
-    }
-
-    .nombre {
-        font-weight: 600;
-        color: #ffffff;
-    }
-
-    .precios {
-        font-size: 1.3em;
-        font-weight: bold;
-        color: #f05812;
-    }
-.menu-hamburguesas {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #070707;
-  border-radius: 12px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.menu-hamburguesas .item {
-  display: flex;
-  justify-content: space-between;
-  background: #ece9e9;
-  padding: 10px 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgb(0, 0, 0);
-  transition: transform 0.2s ease;
-}
-
-.menu-hamburguesas .item:hover {
-  transform: scale(1.02);
-  background-color: #e6d818;
-}
-
-.menu-hamburguesas .nombre {
-  font-weight: 600;
-  color: #fffefe;
-  font-size: 1rem;
-  flex: 1;
-}
-
-.menu-hamburguesas .precios {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #dd3d15;
-  margin-left: 10px;
-}
-.menu-ramen {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fefefe;
-  border-radius: 12px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.menu-ramen .item {
-  display: flex;
-  justify-content: space-between;
-  background: #e1e0e0;
-  padding: 10px 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgb(0, 0, 0);
-  transition: transform 0.2s ease;
-}
-
-.menu-ramen .item:hover {
-  transform: scale(1.02);
-  background-color: #f5e61e;
-}
-
-.menu-ramen .nombre {
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 1rem;
-  flex: 1;
-}
-
-.menu-ramen .precios {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #f05812;
-  margin-left: 10px;
-}
-.menu-ensaladas {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fefefe;
-  border-radius: 12px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.menu-ensaladas .item {
-  display: flex;
-  justify-content: space-between;
-  background: #000000;
-  padding: 10px 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.menu-ensaladas .item:hover {
-  transform: scale(1.02);
-  background-color: #00b7f9;
-}
-
-.menu-ensaladas .nombre {
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 1rem;
-  flex: 1;
-}
-
-.menu-ensaladas .precios {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #f05812;
-  margin-left: 10px;
-}
-.menu-ensaladas .descripcion {
-  font-size: 0.9rem;
-  color: #dddddd;
-  margin-top: 5px;
-}
-
-.menu-pone {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fefefe;
-  border-radius: 12px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-
-.menu-pone .item {
-  display: flex;
-  justify-content: space-between;
-  background: #000000;
-  padding: 10px 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.menu-pone .item:hover {
-  transform: scale(1.02);
-  background-color: #06b1e1;
-}
-
-.menu-pone .nombre {
-  font-weight: 600;
-  color: #050505;
-  font-size: 1rem;
-  flex: 1;
-}
-
-.menu-pone .precios {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #f05812;
-  margin-left: 10px;
-}
-.menu-pone .descripcion {
-  font-size: 0.9rem;
-  color: #ffffff;
-  margin-top: 5px;
-}
-.promociones-seccion {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.promociones-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.grupo-promos {
-  display: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.grupo-promos img {
-  max-width: 300px;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }

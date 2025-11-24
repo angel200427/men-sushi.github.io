@@ -5,377 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🍣 Menú Sushi Land</title>
   <link rel="stylesheet" href="stylesMenu.css">
-   <script src="scriptmenu.js"></script>
+  <script src="scriptmenu.js" defer></script>
 </head>
-
 
 <body class="tablas-page">
   <div class="background-overlay"></div>
+
   <div class="container">
+
+    <!-- LOGO -->
     <header class="logo-header">
       <img src="img/sushi logo.jpg" alt="Logo Sushi Land" class="logo centrado">
       <h1>Menú Sushi Land</h1>
     </header>
+
+    <!-- BOTÓN VOLVER -->
     <a href="index.html" class="boton-regreso">⬅️ Volver al Inicio</a>
+
+    <!-- PROMOCIONES -->
     <section id="promociones" class="promociones-seccion">
-  <h2 class="titulo-promociones">🎉 Promociones del Día</h2>
-  <div id="contenedor-promociones" class="promociones-grid">
+      <h2 class="titulo-promociones">🎉 Promociones del Día</h2>
 
-    <!-- Miércoles -->
-    <div class="grupo-promos promo-miercoles">
-      <img src="img/10bocadospromo.jpg" alt="Promo Miércoles 1">
-      <img src="img/20bocadospromo.jpg" alt="Promo Miércoles 2">
-      <img src="img/30bocadospromo.jpg" alt="Promo Miércoles 3">
-      <img src="img/40bocadospromo.jpg" alt="Promo Miércoles 4">
+      <div id="contenedor-promociones" class="promociones-grid">
 
-    </div>
-
-    <!-- Jueves -->
-    <div class="grupo-promos promo-jueves">
-      <img src="img/promojueves.jpg" alt="Promo Jueves 1">
-    </div>
-
-    <!-- Viernes -->
-    <div class="grupo-promos promo-viernes">
-      <img src="img/promoviernes.jpg" alt="Promo Viernes 1">
-      <img src="img/promoviernes20.jpg" alt="Promo Viernes 2">
-      <img src="img/promoviernes30.jpg" alt="Promo Viernes 3">
-    </div>
-
-    <!-- Sábado -->
-    <div class="grupo-promos promo-sabado">
-      <img src="img/promosabado.jpg" alt="Promo Sábado 1">
-    </div>
-
-  <!-- 
-  Domingo 
-  <div class="grupo-promos promo-domingo">
-      <img src="img/promodomingo10.jpg" alt="Promo Domingo 1">
-      <img src="img/promodomingo20.jpg" alt="Promo Domingo 2">
-      <img src="img/promodomingo30.jpg" alt="Promo Domingo 3">
-      <img src="img/promodomingo40.jpg" alt="Promo Domingo 4">
-      <img src="img/promodomingo60.jpg" alt="Promo Domingo 5">
-  </div>
--->
-
-
-  </div>
-</section>
-    <!-- NUEVA SECCIÓN DE TABLAS ESTILO BONITO -->
-    <section class="contenedor-tablas">
-      <h2 class="titulo-tablas">TABLAS POR BOCADOS</h2>
-      <div class="tablas-grid">
-        <div class="tarjeta-tabla">
-          <h2>10 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">5</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">5</span><span class="nombre">Kioto</span></li>
-          </ul>
-          <span class="precio">$6</span>
+        <!-- Miércoles -->
+        <div class="grupo-promos promo-miercoles">
+          <img src="img/10bocadospromo.jpg" alt="Promo Miércoles 1">
+          <img src="img/20bocadospromo.jpg" alt="Promo Miércoles 2">
+          <img src="img/30bocadospromo.jpg" alt="Promo Miércoles 3">
+          <img src="img/40bocadospromo.jpg" alt="Promo Miércoles 4">
         </div>
-        <div class="tarjeta-tabla">
-          <h2>20 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">5</span><span class="nombre">Titan Oriental</span></li>
-            <li><span class="cantidad">5</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">5</span><span class="nombre">Volcano</span></li>
-            <li><span class="cantidad">5</span><span class="nombre">Ebi</span></li>
-          </ul>
-          <span class="precio">$11,50</span>
+
+        <!-- Jueves -->
+        <div class="grupo-promos promo-jueves">
+          <img src="img/promojueves.jpg" alt="Promo Jueves 1">
         </div>
-        <div class="tarjeta-tabla">
-          <h2>30 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">10</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Fresh Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Ebi</span></li>
-          </ul>
-          <span class="precio">$16,50</span>
+
+        <!-- Viernes -->
+        <div class="grupo-promos promo-viernes">
+          <img src="img/promoviernes.jpg" alt="Promo Viernes 1">
+          <img src="img/promoviernes20.jpg" alt="Promo Viernes 2">
+          <img src="img/promoviernes30.jpg" alt="Promo Viernes 3">
         </div>
-        
-        <div class="tarjeta-tabla">
-          <h2>40 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">10</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Maki</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Ebi</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Volcano</span></li>
-          </ul>
-          <span class="precio">$21,50</span>
+
+        <!-- Sábado -->
+        <div class="grupo-promos promo-sabado">
+          <img src="img/promosabado.jpg" alt="Promo Sábado 1">
         </div>
-        
-        <div class="tarjeta-tabla">
-          <h2>60 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">10</span><span class="nombre">Acevichado</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Tataki</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Volcano Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Madurito Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Abocato Roll</span></li>
-          </ul>
-          <span class="precio">$26,50</span>
-        </div>
-        
-        <div class="tarjeta-tabla">
-          <h2>70 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">10</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Maki</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Ebi</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Volcano Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Titan Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Acevichado</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Aomori Roll</span></li>
-          </ul>
-          <span class="precio">$31,50</span>
-        </div>
-        
-        <div class="tarjeta-tabla">
-          <h2>80 Bocados</h2>
-          <ul class="alineado">
-            <li><span class="cantidad">10</span><span class="nombre">Tataki</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Kobe</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Ebi</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Kioto</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Sendai</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Madurito Roll</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Acevichado</span></li>
-            <li><span class="cantidad">10</span><span class="nombre">Fresh Roll</span></li>
-          </ul>
-          <span class="precio">$36,50</span>
-        </div>
+
       </div>
     </section>
 
-<section class="menu-container">
+    <!-- MENÚ GENERAL -->
+    <section class="menu-general">
+
+      <h2 class="titulo-seccion">🥗 Entradas</h2>
+      <div class="bloque-menu">
+        <div class="item"><span>Camarones Furai</span><span>$3.99</span></div>
+        <div class="item"><span>Giozas (Cerdo/Camarón/Carne) x5</span><span>$3.75</span></div>
+        <div class="item"><span>Junkas</span><span>$1.50</span></div>
+        <div class="item"><span>Nigiris</span><span>$1.00</span></div>
+        <div class="item"><span>Sushi Burger</span><span>$5.00</span></div>
+      </div>
+
+      <h2 class="titulo-seccion">🍜 Sopas</h2>
+      <div class="bloque-menu">
+        <div class="item"><span>RamenLand</span><span>$8.00</span></div>
+        <div class="item"><span>Ramen de Cerdo/Pollo/Carne</span><span>$6.00</span></div>
+        <div class="item"><span>Ceviche</span><span>$6.00</span></div>
+      </div>
+
+      <h2 class="titulo-seccion">🍱 Tablas Especiales</h2>
+      <div class="bloque-menu">
+        <div class="item"><span>Tabla Estudiantil</span><span>$10.00</span></div>
+        <div class="item"><span>Tabla Geisha</span><span>$12.00</span></div>
+        <div class="item"><span>Tabla Kayosama</span><span>$17.00</span></div>
+        <div class="item"><span>Tabla Príncipe</span><span>$27.00</span></div>
+        <div class="item"><span>Tabla del Dragón</span><span>$45.00</span></div>
+      </div>
+
+      <h2 class="titulo-seccion">🥘 Plato Fuerte</h2>
+      <div class="bloque-menu">
+        <div class="item"><span>Tory Yaki</span><span>$7.00</span></div>
+      </div>
+
+    </section>
+
+    <!-- TIPOS DE ROLLOS -->
+    <section class="menu-container">
+
       <button id="toggleMenu">Ver tipos de rollos</button>
 
       <section class="menu" id="menuContent">
+        
         <h2>Rollos Precocidos</h2>
-      <ul>
-        <li><strong>Kioto:</strong> Camarón apanizado con ajonjolí</li>
-        <li><strong>Sendai:</strong> Corvina con aguacate y maduro</li>
-        <li><strong>Aomori Roll:</strong> Queso crema, aguacate, pollo crujiente (cobertura de aguacate y mango)</li>
-        <li><strong>Acevichado:</strong> Calamar, pimientos, ceviche de corvina</li>
-        <li><strong>Maki:</strong> Kanikama, pepinillo (alga por fuera)</li>
-        <li><strong>Burger:</strong> Carne molida, lechuga, papa, tocino, salsa BBQ</li>
-        <li><strong>Chicken Roll:</strong> Pollo con tocino BBQ</li>
-        <li><strong>Tataki:</strong> Corvina, cebollín, aguacate</li>
-        <li><strong>Ebi:</strong> Aguacate y camarón crujiente, caviar</li>
-        <li><strong>Volcano Roll:</strong> Aguacate, camarón</li>
-        <li><strong>Abocato Roll:</strong> Aguacate, camarón, cebollín, queso crema (cobertura de aguacate)</li>
-        <li><strong>Fresh Roll:</strong> Queso crema, mango, aguacate (cobertura de frutilla)</li>
-        <li><strong>Gimbap Maki Roll:</strong> Queso crema, tiras de huevo, vegetales tempura, tiras de salchicha</li>
-        <li><strong>Hosomaki de Corvina:</strong> Camaron, aguacate, mayonesa acevichada, topic de togarashi (cobertura de Dorado)</li>
-        <li><strong>spicy crap:</strong> tar tar de camaron, queso parmesano</li>
+        <ul>
+          <li><strong>Kioto:</strong> Camarón apanizado con ajonjolí</li>
+          <li><strong>Sendai:</strong> Corvina con aguacate y maduro</li>
+          <li><strong>Aomori Roll:</strong> Queso crema, aguacate, pollo crujiente (cobertura de aguacate y mango)</li>
+          <li><strong>Acevichado:</strong> Calamar, pimientos, ceviche de corvina</li>
+          <li><strong>Maki:</strong> Kanikama, pepinillo (alga por fuera)</li>
+          <li><strong>Burger:</strong> Carne molida, lechuga, papa, tocino, salsa BBQ</li>
+          <li><strong>Chicken Roll:</strong> Pollo con tocino BBQ</li>
+          <li><strong>Tataki:</strong> Corvina, cebollín, aguacate</li>
+          <li><strong>Ebi:</strong> Aguacate y camarón crujiente, caviar</li>
+          <li><strong>Volcano Roll:</strong> Aguacate, camarón</li>
+          <li><strong>Abocato Roll:</strong> Aguacate, camarón, cebollín, queso crema</li>
+          <li><strong>Fresh Roll:</strong> Queso crema, mango, aguacate</li>
+          <li><strong>Gimbap Maki Roll:</strong> Queso crema, huevo, vegetales tempura</li>
+          <li><strong>Hosomaki de Corvina:</strong> Camarón, aguacate, mayonesa acevichada</li>
+          <li><strong>Spicy Crap:</strong> Tartár de camarón, queso parmesano</li>
+        </ul>
 
-      </ul>
-      <h2>Rollos Calientes</h2>
-      <ul>
-        <li><strong>Kobe:</strong> Surimi con aguacate</li>
-        <li><strong>Titán Oriental:</strong> Maduro, kamikama, aguacate</li>
-        <li><strong>Madurito Roll:</strong> Maduro, aguacate, queso crema, corvina, lechuga o cebollín</li>
-        <li><strong>Tempura 593:</strong> Corvina, Cicharon tempurizadoi de corvina, aguacate</li>
+        <h2>Rollos Calientes</h2>
+        <ul>
+          <li><strong>Kobe:</strong> Surimi con aguacate</li>
+          <li><strong>Titán Oriental:</strong> Maduro, kamikama, aguacate</li>
+          <li><strong>Madurito Roll:</strong> Maduro, aguacate, queso crema, corvina</li>
+          <li><strong>Tempura 593:</strong> Corvina, chicharrón tempurizado, aguacate</li>
+        </ul>
 
-      </ul>
-<h2>Rollos Crudos</h2>
-      <ul>
-        <li><strong>Sake:</strong> Salmón (crudo) - $8.99</li>
-        <li><strong>Crunch Roll:</strong> Aguacate, atún, salmón tempurizado con surimi - $10.00</li>
-        <li><strong>Nori Roll:</strong> Queso crema, salmón, pepinillo, surimi - $8.99</li>
-        <li><strong>Atún Roll:</strong> Atún, queso crema, pepinillo, tocino - $8.99</li>
-        <li><strong>California:</strong> Salmon, queso crema, aguacate,(cobertura de pepinillos) - $8.99</li>
-        <li><strong>Oso Maki:</strong> Salmon, arroz alga por fuera - $8.99</li>
+        <h2>Rollos Crudos</h2>
+        <ul>
+          <li><strong>Sake:</strong> Salmón - $8.99</li>
+          <li><strong>Crunch Roll:</strong> Atún, salmón tempurizado - $10.00</li>
+          <li><strong>Nori Roll:</strong> Queso crema, salmón, pepinillo - $8.99</li>
+          <li><strong>Atún Roll:</strong> Atún, queso crema, tocino - $8.99</li>
+          <li><strong>California:</strong> Salmón, queso crema, aguacate - $8.99</li>
+          <li><strong>Oso Maki:</strong> Salmón con arroz - $8.99</li>
+        </ul>
 
-      </ul>
-      <p><strong>Rollos calientes a elegir:</strong> Tempurizado | Apanizado | Panco</p>
+        <p><strong>Rollos calientes a elegir:</strong> Tempurizado | Apanizado | Panko</p>
+      </section>
     </section>
-    <!-- DEMÁS SECCIONES -->
-  
-      <h2>🍔 Sushi Burgers</h2>
-<div class="menu-hamburguesas">
-  <div class="item">
-    <span class="nombre">Hamburguesa de Carne</span>
-    <span class="precios">$5.00</span>
-  </div>
-  <div class="item">
-    <span class="nombre">Hamburguesa de Pollo</span>
-    <span class="precios">$5.00</span>
-  </div>
-  <div class="item">
-    <span class="nombre">Hamburguesa de Camarón</span>
-    <span class="precios">$5.00</span>
-  </div>
-  <div class="item">
-    <span class="nombre">Hamburguesa de Pulpo</span>
-    <span class="precios">$5.00</span>
-  </div>
-  <div class="item">
-    <span class="nombre">Cruispui sushi</span>
-    <span class="precios">$5.00</span>
-  </div>
-</div>
 
-      <h2>🍜 Ramen</h2>
-      <h2>Normal, SemiPicante, Picante</h2>
-     <div class="menu-ramen">
-  <div class="item">
-    <span class="nombre">Ramen de Cerdo</span>
-    <span class="precios">$4.00</span>
-  </div>
-    <img src="img/ramen.jpeg" alt="icono" class="zoom-icon" onclick="toggleZoom(this)">
-  <div class="item">
-    <span class="nombre">Ramen de Pollo</span>
-    <span class="precios">$4.00</span>
-  </div>
-  <div class="item">
-    <span class="nombre">Ramen mixto pollo-cerdo</span>
-    <span class="precios">$8.00</span>
-  </div>
-</div>
-
-
-      <h2>🥗 Ensaladas</h2>
-<div class="menu-ensaladas">
-  <div class="item"> <div>
-
-    <span class="nombre">Ensalada Mar y Tierra</span>
-    <span class="precios">$5.00</span> <br> 
-<div class="descripcion">
-        Camarón (4 camarones grandes)<br>
-        Tomate cherry (100gr)<br>
-        Pepinillo (200gr)<br>
-        Lechuga (100gr)<br>
-        Zanahoria (100gr)<br>
-        Canicama (100gr)<br>
-        Col morada (100gr)
-      </div>
-      </div>
-  </div>
-</div>
- <h2>🥗 Poke Bowls</h2>
-<div class="menu-pone">
-  <div class="item">
-     <div>
-    <span class="nombre">Poke Salmón</span>
-    <span class="precios">$7.00</span><br>
- <div class="descripcion">
-        Arroz blanco<br>
-        Salmón fresco<br>
-        Zanahoria rallada<br>
-        Aguacate<br>
-        Mango y salsa ponzu.
-      </div>
-    </div>
-   </div>
-   <div class="item">
-    <div>
-    <span class="nombre">Poke Atún</span>
-    <span class="precios">$7.00</span><br>
-<div class="descripcion">
-        Arroz sushi<br>
-        Atún fresco<br>
-        Wakame<br>
-        Pepino<br>
-        Cebolla morada<br>
-        Maíz y alioli de wasabi.
-      </div>
-    </div>
+    <!-- BEBIDAS -->
+    <h2 class="titulo-seccion">🍹 Bebidas</h2>
+    <div class="bloque-menu">
+      <div class="item"><span>Té de Jamaica (Jarra)</span><span>$3.50</span></div>
+      <div class="item"><span>Té de Jamaica (Vaso)</span><span>$1.00</span></div>
+      <div class="item"><span>Jugo de Limón (Jarra)</span><span>$3.50</span></div>
+      <div class="item"><span>Jugo de Limón (Vaso)</span><span>$1.00</span></div>
     </div>
 
-  <div class="item">
-     <div>
-    <span class="nombre">Poke Camarón</span>
-    <span class="precios">$6.50</span><br>
-<div class="descripcion">
-        Camarones salteados<br>
-        Piña<br>
-        Tomate cherry<br>
-        Aguacate<br>
-        Lechuga.
-      </div>
-    </div>
-   </div>
-  <div class="item">
-     <div>
-    <span class="nombre">Poke Vegano</span>
-    <span class="precios">$6.00</span>
-<div class="descripcion">
-        Arroz integral<br>
-        Pepino<br>
-        Zanahoria<br>
-        Aguacate<br>
-        Col morada y soya dulce.
-      </div>
-    </div>
-    </div>
   </div>
-
-</div>
-    <h2>🍹 Bebidas con y sin alcohol</h2>
-<div class="menu-bebidas">
-    <div class="item">
-        <span class="nombre">Michelada de mora</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Michelada de maracuyá</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Michelada de mango</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Piña colada</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Cairipiña</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Mojito de maracuyá</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Mojito de mora</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Pantera rosa</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Geisha de piña</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Geisha de frutos verdes</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Geisha de frutos rojos</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Geisha de maracuyá</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Geisha de mora</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-    <div class="item">
-        <span class="nombre">Geisha de frutilla</span>
-        <span class="precios">Pequeña $2 | Grande $5</span>
-    </div>
-</div>
-
-
-    </section>
-  </div>
-  
 </body>
 </html>
