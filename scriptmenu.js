@@ -45,3 +45,33 @@ document.addEventListener("DOMContentLoaded", function () {
     if (promoSection) promoSection.style.display = "none";
   }
 });
+// ==== MODAL PARA ZOOM ====
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+  // Crear modal dinámicamente
+  const modal = document.createElement("div");
+  modal.id = "imgModal";
+
+  const modalImg = document.createElement("img");
+  modal.appendChild(modalImg);
+
+  document.body.appendChild(modal);
+
+  // Seleccionar todas las imágenes del menú
+  const imagenes = document.querySelectorAll(".descripcion img");
+
+  imagenes.forEach(img => {
+    img.addEventListener("click", () => {
+      modalImg.src = img.src;
+      modal.style.display = "flex";
+    });
+  });
+
+  // Cerrar modal al tocar afuera
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
