@@ -67,28 +67,54 @@ body {
 
 /* ==================== PROMOCIONES ==================== */
 .promociones-seccion {
-  margin-bottom: 40px;
-}
-
-.titulo-promociones {
+  padding: 20px;
   text-align: center;
-  font-size: 2rem;
-  color: #ffd369;
-  margin-bottom: 15px;
-  text-shadow: 0 0 12px black;
-  animation: fadeInUp 1s ease;
 }
 
-.promociones-grid img {
+.slider {
+  position: relative;
+  max-width: 320px; /* tamaño ideal celular */
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-contenedor {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.4);
-  margin: 10px 0;
-  transition: transform .3s ease;
+  border-radius: 15px;
+  height: 220px;
+  object-fit: cover;
 }
 
-.promociones-grid img:hover {
-  transform: scale(1.05);
+/* Flechas */
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 22px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.flecha.izquierda {
+  left: 5px;
+}
+
+.flecha.derecha {
+  right: 5px;
 }
 
 /* ==================== MENÚ GENERAL ==================== */
