@@ -66,11 +66,15 @@ body {
 }
 
 /* ==================== PROMOCIONES ==================== */
+.promociones-seccion {
+  padding: 40px;
+  text-align: center;
+}
+
 .slider {
   position: relative;
-  width: 100%;
   max-width: 600px;
-  margin: 40px auto;
+  margin: auto;
 }
 
 .slider-ventana {
@@ -80,39 +84,36 @@ body {
 
 .slider-contenedor {
   display: flex;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.5s ease;
 }
 
 .slide {
   min-width: 100%;
-  display: flex;
+  display: none; /* oculto por defecto */
   justify-content: center;
 }
 
 .slide img {
   width: 100%;
-  max-height: 500px;
-  object-fit: contain;
-  cursor: pointer;
+  border-radius: 12px;
 }
 
-/* FLECHAS */
+/* Flechas */
 .flecha {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.5);
   color: white;
   border: none;
-  font-size: 28px;
-  padding: 12px;
+  font-size: 30px;
   cursor: pointer;
+  padding: 5px 10px;
   z-index: 10;
 }
 
 .izquierda { left: 10px; }
 .derecha { right: 10px; }
-
 /* ===== MODAL ZOOM ===== */
 #modalZoom {
   position: fixed;

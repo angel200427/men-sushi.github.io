@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // =============================
-  // 🔥 MOSTRAR PROMOS SEGÚN DÍA
+  // 📅 FILTRAR POR DÍA
   // =============================
 
   const diaSemana = new Date().getDay();
@@ -20,19 +20,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const todasSlides = document.querySelectorAll(".slide");
   let slidesActivas = [];
 
-  todasSlides.forEach(slide => {
-    slide.style.display = "none";
-  });
+  todasSlides.forEach(slide => slide.style.display = "none");
 
   if (claseHoy) {
-    slidesActivas = document.querySelectorAll("." + claseHoy);
+    slidesActivas = Array.from(document.querySelectorAll("." + claseHoy));
+
     slidesActivas.forEach(slide => {
       slide.style.display = "flex";
     });
   }
 
   // =============================
-  // 🎞️ SLIDER CON BOTONES
+  // 🎞️ SLIDER REAL
   // =============================
 
   const contenedor = document.querySelector(".slider-contenedor");
@@ -45,27 +44,21 @@ document.addEventListener("DOMContentLoaded", function () {
     contenedor.style.transform = `translateX(-${index * 100}%)`;
   }
 
-  btnDer.addEventListener("click", function () {
+  btnDer.addEventListener("click", () => {
     if (slidesActivas.length === 0) return;
 
-    index++;
-    if (index >= slidesActivas.length) {
-      index = 0;
-    }
-
+    index = (index + 1) % slidesActivas.length;
     actualizarSlider();
   });
 
-  btnIzq.addEventListener("click", function () {
+  btnIzq.addEventListener("click", () => {
     if (slidesActivas.length === 0) return;
 
-    index--;
-    if (index < 0) {
-      index = slidesActivas.length - 1;
-    }
-
+    index = (index - 1 + slidesActivas.length) % slidesActivas.length;
     actualizarSlider();
   });
+
+
 
   // =============================
   // 🔍 ZOOM AL HACER CLICK
