@@ -20,8 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const todasSlides = document.querySelectorAll(".slide");
   let slidesActivas = [];
 
+  // Ocultar todas
   todasSlides.forEach(slide => slide.style.display = "none");
 
+  // Mostrar solo las del día
   if (claseHoy) {
     slidesActivas = Array.from(document.querySelectorAll("." + claseHoy));
 
@@ -31,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =============================
-  // 🎞️ SLIDER REAL
+  // 🎞️ SLIDER
   // =============================
 
   const contenedor = document.querySelector(".slider-contenedor");
@@ -44,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     contenedor.style.transform = `translateX(-${index * 100}%)`;
   }
 
+  // Botón derecha
   btnDer.addEventListener("click", () => {
     if (slidesActivas.length === 0) return;
 
@@ -51,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     actualizarSlider();
   });
 
+  // Botón izquierda
   btnIzq.addEventListener("click", () => {
     if (slidesActivas.length === 0) return;
 
@@ -58,7 +62,32 @@ document.addEventListener("DOMContentLoaded", function () {
     actualizarSlider();
   });
 
+  // =============================
+  // 📱 TOUCH (DESLIZAR EN CELULAR)
+  // =============================
 
+  let startX = 0;
+  let endX = 0;
+
+  contenedor.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  contenedor.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX;
+
+    if (slidesActivas.length === 0) return;
+
+    if (startX > endX + 50) {
+      // desliza izquierda
+      index = (index + 1) % slidesActivas.length;
+    } else if (startX < endX - 50) {
+      // desliza derecha
+      index = (index - 1 + slidesActivas.length) % slidesActivas.length;
+    }
+
+    actualizarSlider();
+  });
 
   // =============================
   // 🔍 ZOOM AL HACER CLICK
