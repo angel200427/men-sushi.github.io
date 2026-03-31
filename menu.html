@@ -8,22 +8,25 @@
   <script src="scriptmenu.js" defer></script>
 </head>
 
-<body class="tablas-page">
-  <div class="background-overlay"></div>
+</head>
 
-  <div class="container">
+<body>
 
-    <!-- LOGO -->
-    <header class="logo-header">
-      <img src="img/sushi logo.jpg" alt="Logo Sushi Land" class="logo centrado">
-      <h1>Menú Sushi Land</h1>
-    </header>
+<!-- 🌸 PÉTALOS -->
+<div id="petalos"></div>
 
-    <!-- BOTÓN VOLVER -->
-    <a href="index.html" class="boton-regreso">⬅️ Volver al Inicio</a>
+<div class="container">
 
- <section id="promociones" class="promociones-seccion">
-  <h2 class="titulo-promociones">🎉 Promociones del Día</h2>
+<header>
+<img src="img/sushi logo.jpg" class="logo">
+<h1 class="titulo">🍣 Sushi Land</h1>
+</header>
+
+<a href="index.html" class="btn-volver">⬅ Volver</a>
+
+<!-- PROMOCIONES -->
+<section class="promo">
+<h2>🎉 Promociones del dia</h2>
 
   <div class="slider">
     <button class="flecha izquierda">&#10094;</button>
@@ -33,30 +36,30 @@
 
         <!-- MARTES -->
         <div class="slide promo-martes">
-          <img src="img/promocones.jpeg">
+          <img src="img/promocones.jpeg"class="img-plato">
         </div>
 
         <!-- MIÉRCOLES -->
-        <div class="slide promo-miercoles"><img src="img/promocones.jpeg"></div>
-        <div class="slide promo-miercoles"><img src="img/10bocadospromo.jpg"></div>
-        <div class="slide promo-miercoles"><img src="img/20bocadospromo.jpg"></div>
-        <div class="slide promo-miercoles"><img src="img/30bocadospromo.jpg"></div>
-        <div class="slide promo-miercoles"><img src="img/40bocadospromo.jpg"></div>
+        <div class="slide promo-miercoles"><img src="img/promocones.jpeg"class="img-plato"></div>
+        <div class="slide promo-miercoles"><img src="img/10bocadospromo.jpg"class="img-plato"></div>
+        <div class="slide promo-miercoles"><img src="img/20bocadospromo.jpg"class="img-plato"></div>
+        <div class="slide promo-miercoles"><img src="img/30bocadospromo.jpg"class="img-plato"></div>
+        <div class="slide promo-miercoles"><img src="img/40bocadospromo.jpg"class="img-plato"></div>
 
         <!-- JUEVES -->
-        <div class="slide promo-jueves"><img src="img/promojueves.jpg"></div>
-        <div class="slide promo-jueves"><img src="img/promocones.jpeg"></div>
+        <div class="slide promo-jueves"><img src="img/promojueves.jpg"class="img-plato"></div>
+        <div class="slide promo-jueves"><img src="img/promocones.jpeg"class="img-plato"></div>
 
         <!-- VIERNES (YA COMPLETO 🔥) -->
         <div class="slide promo-viernes"><img src="img/promoviernes.jpg"></div>
-        <div class="slide promo-viernes"><img src="img/promoviernes20.jpg"></div>
-        <div class="slide promo-viernes"><img src="img/promoviernes30.jpg"></div>
+        <div class="slide promo-viernes"><img src="img/promoviernes20.jpg"class="img-plato"></div>
+        <div class="slide promo-viernes"><img src="img/promoviernes30.jpg"class="img-plato"></div>
 
         <!-- SÁBADO -->
-        <div class="slide promo-sabado"><img src="img/promocones.jpeg"></div>
+        <div class="slide promo-sabado"><img src="img/promocones.jpeg" class="img-plato"></div>
 
         <!-- DOMINGO -->
-        <div class="slide promo-domingo"><img src="img/promocones.jpeg"></div>
+        <div class="slide promo-domingo"><img src="img/promocones.jpeg" class="img-plato"></div>
 
       </div>
     </div>
@@ -67,7 +70,7 @@
 
 
 
-   <section class="menu-general">
+<section class="menu-general fade-section">
 
       <h2 class="titulo-seccion">🥗 Entradas</h2>
       <div class="bloque-menu">
@@ -76,19 +79,22 @@
           <span>Camarones Furai</span><span>$3.99</span>
         </div>
          
-        <p class="descripcion">
-         Cama de vegetales tempura con 3 langostinos en panko y su mayonesa acevichada .
-         <img src="img/20251119-DSC02299.jpg" alt="">
-        </p>
- <div class="item">
-          <span>Crispi chiken japones</span><span></span>
-          </div>
-          <p class="descripcion">
-         <p>$1.50   Pequeño</p>
-         <p>$3.00   Mediano</p>
-         <p>$6.00   Grande</p>
-         <img src="img/crispi.jpeg" alt="">
-        </p>
+       <p class="desc">
+  Cama de vegetales tempura con 3 langostinos en panko y su mayonesa acevichada.
+</p>
+<img src="img/20251119-DSC02299.jpg" class="img-plato">
+
+<!-- CRISPI -->
+<div class="item">
+  <span>Crispi chicken japones</span>
+</div>
+
+<div class="desc">
+  <p>$1.50 Pequeño</p>
+  <p>$3.00 Mediano</p>
+  <p>$6.00 Grande</p>
+</div>
+<img src="img/crispi.jpeg" class="img-plato">
         
         <div class="item">
           <span>Gyozas</span><span>$3.75</span>
@@ -100,19 +106,7 @@
         con salsa de soya, anguila o ponzú.
         </p>
 
-        <div class="item">
-          <span>Junkas</span><span>$1.50</span>
-        </div>
-        <p class="descripcion">
-          Barcos de arroz,atún en cortes brunoise bañado en salsa acevichada con aguacate. 
-          <img src="img/20251118-DSC02250.jpg" alt="">
-        </p>
-<P>Barco de arroz ,salmón en cortes brunouis  en salsa acevichada con aguacate 
-  <img src="img/20251118-DSC02251.jpg" alt=""> 
-    </P>
-<P> Barco de arroz ,cangrejo desmenuzado en salsa acevichada con sesamo -ajonjoli. 
-  <img src="img/20251118-DSC02248.jpg" alt="">
-</P>
+      
         <div class="item"><span>Nigiris</span><span>$1.00</span></div>
         <p class="descripcion">
              <p>Salmón</p> 
@@ -143,7 +137,7 @@
         <div class="item"><span>Ramen de Cerdo</span><span>$7.00/ 5.00 </span></div>
         <p class="descripcion">
          Tallarines en caldo de soya picante, cebolla blanca, zanahoria, choclo, col, brocoli, huevo, cebollin, sesamo blanco, sesamo Negro ,gyoza y carne de cerdo y alga nori.
-       <img src="img/20251118-DSC02266.jpg" alt="">
+       <img src="img/20251118-DSC02266.jpg" class="img-plato">
         </p>
 
         <div class="item"><span>Ramen de langostinos</span><span>$7.00 / 5.00</span></div>
@@ -151,11 +145,7 @@
         Tallarines en caldo de soya picante ,cebolla blanca zanahoria, kanicama, camarón, huevo, cebollin, sesamo blanco, sesamo negro y langostino al panko y gyoza. 
         </p>
 
-        <div class="item"><span>Ceviche</span><span>$7.00 </span></div>
-        <p class="descripcion">
-         80 gramos de corvina, macerado en limón, cebolla perla ,jengibre cilandro, choclo , chulpi ,leche de tigre ,aguacate ,medio pedazo de kanicama, sésamo negro .
-       <img src="img/20251119-DSC02304.jpg" alt="">
-        </p>
+       
 
       </div>
 
@@ -180,21 +170,14 @@
 
       </div>
 
-      <h2 class="titulo-seccion">🥘 Plato Fuerte</h2>
-      <div class="bloque-menu">
-
-        <div class="item"><span>Tory Yaki</span><span>$7.00</span></div>
-        <p class="descripcion">
-          Cama de col y tallarines salteados con salsa de anguila. Acompañado de pollo relleno de queso crema  en panko y tres langostinos en panko Topic de sesamo blanco y  te de jamaica.
-        <img src="img/20251120-DSC02379.jpg" alt="">
-        </p>
+     
 
       </div>
 
     </section>
 
     <!-- TIPOS DE ROLLOS -->
-    <section class="menu-container">
+   <section class="menu-container fade-section">
 
       <button id="toggleMenu">Ver tipos de rollos</button>
 
@@ -249,7 +232,233 @@
       <div class="item"><span>Jugo de Limón (Jarra)</span><span>$3.50</span></div>
       <div class="item"><span>Jugo de Limón (Vaso)</span><span>$1.00</span></div>
     </div>
+  <!-- cocteleria -->
+<section class="menu-cervezas cocteles-pro">
+  <div class="menu-bg"></div>
+  <div class="menu-content cocteles-container fade-section">
+    <h2 class="titulo-seccion">🍸 Cocteles</h2>
+<div class="bloque-menu">
 
+<div class="menu-item">
+  <span>Americano</span>
+  <span class="price">$6.00</span>
+</div>
+<p>Campari / Vermouth rojo / Naranja / soda</p>
+
+<div class="menu-item">
+  <span>Limoncello Spritz</span>
+  <span class="price">$6.00</span>
+</div>
+<p>Limoncello / Limón / Prosecco soda</p>
+
+<div class="menu-item">
+  <span>Cuba Libre</span>
+  <span class="price">$6.00</span>
+</div>
+<p>Ron / Limón / Coca Cola</p>
+
+    <div class="menu-item">
+      <span>Mulata</span>
+      <p>Ron / Cafe / Crema de Cacao / Licor de Cafe / Limon</p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <span>Presidente</span>
+      <p>Triple sec / Vermouth / Ron / Granadina / Cereza</p>
+      <span class="price">$6.00</span>
+    </div>
+  
+  <div class="menu-item">
+      <span>Daiquiri</span>
+      <p>Limon / Ron / Srop </p>
+      <span class="price">$6.00</span>
+    </div>
+ 
+
+  <div class="menu-item">
+      <span>Mojito</span>
+      <p>Limon / Ron / Sirope / Hierba Buena / Agua con gas (Puede tener sus variaciones de maracuya y frutos rojos)</p>
+      <span class="price">$6.00</span>
+    </div>
+ 
+
+<div class="menu-item">
+      <span>Micheladas</span>
+      <p>Clasica</p>
+      <p>Maracuya</p>
+      <p>Frutos rojos</p>
+      <span class="price">$5.00</span>
+    </div>
+
+
+<div class="menu-item">
+      <span>Pornstar Martini</span>
+      <p>Sirope de Vainilla / Vodka / Maracuya / Jugo de Limon / Champagne </p>
+      <span class="price">$6.00</span>
+    </div>
+ 
+
+<div class="menu-item">
+      <span>Aperol Spritz</span>
+      <p>Aperol / Proseco / Agua Mineral / Naranja </p>
+      <span class="price">$6.00</span>
+    </div>
+
+
+<div class="menu-item">
+      <span>Hugo Spritz</span>
+      <p>Sirope de Flores / Proseco / Agua Mineral / Limon </p>
+      <span class="price">$6.00</span>
+    </div>
+
+
+<div class="menu-item">
+      <span>Blue lady</span>
+      <p>Jugo de Limon / Blue curacao / Gin / Arandanos / Sirope </p>
+      <span class="price">$6.00</span>
+    </div>
+ 
+
+<div class="menu-item">
+      <span>Caipiriña</span>
+      <p>Limon / Azucar / Cachaca </p>
+      <span class="price">$6.00</span>
+    </div>
+
+
+<div class="menu-item">
+      <span>Moscow Mule</span>
+      <p>Hierba Buena/ Vodka / Limon / Ginger Beer </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <span>Piña Colada</span>
+      <p>Hierba Buena / Vodka / Limon / Ginger Beer </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <span>Cosmopolitan</span>
+      <p>Frambuesa / Triple sec / Vodka / Limon </p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <span>Daiquiri de Fresa</span>
+      <p>Fresa / Limon / Ron / Sirope </p>
+      <span class="price">$6.00</span>
+    </div>
+
+
+    <div class="menu-item">
+      <span>Old Fashioned</span>
+      <p>Naranja / Sirope / Whisky / Angostura Bitters / Cereza </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <span>Blue Hawai</span>
+      <p>Piña / Crema de Coco / Blue Curacao / Ron / CerezaS  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <span>Martini</span>
+      <p>Gin / Dry Vermuth / Aceituna  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <span>Manhattan</span>
+      <p>Angostura Bitters / Whisky / sweet Vermouth / Cerezas </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <span>Whisky Sour</span>
+      <p>Whisky / Limon / Clara de huevo / Sirope  / Cerezas </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <span>Jager Boom</span>
+      <p> jagermeister / Energizante / Cerveza  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <span>Gin Tonic</span>
+      <p>Gin / limon / Agua Tonica  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item multi-price">
+  <div class="item-left">
+    <span>Sangría</span>
+    <p>Vino tinto, brandy, mix de frutas, canela, agua con gas</p>
+  </div>
+  <div class="item-right">
+    <div class="price-group">
+      <span class="label">Copa</span>
+      <span class="price">$5.00</span>
+    </div>
+    <div class="price-group">
+      <span class="label">Jarra</span>
+      <span class="price">$12.00</span>
+    </div>
+  </div>
+</div>
+
+
+    <div class="menu-item">
+      <span>Porto Tonico</span>
+      <p> Vino Tinto / limon / Agua Tonica  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <span>French 75</span>
+      <p>limon / Gin / Champagne / Sirope  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <span>Negroni</span>
+      <p> Gin / Campari / sweet Vemouth / Naranja </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <span>Paloma</span>
+      <p>Tequila / Limon / Toronja / Sal  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <span>Margarita</span>
+      <p>Triple Sec / Tequila / Limon / Sal  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+<div class="menu-item">
+      <span>Cantarito</span>
+      <p>Tequila / Toronja / Naranja / Agua con Gas / Sal  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+    <div class="menu-item">
+      <span>Tequila Sunrise</span>
+      <p>Tequila / Naranja / Granadina / Cereza  </p>
+      <span class="price">$6.00</span>
+    </div>
+
+</div>
+
+</div>
+
+</section>
   </div>
 </body>
 </html>

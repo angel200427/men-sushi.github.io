@@ -1,358 +1,235 @@
-/* ==================== ESTILO GENERAL ==================== */
 body {
-  background: url('img/fondodesushiyrollos.jpg') center/cover fixed;
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
   color: white;
+
+  /* 🔥 fondo mejorado */
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)),
+  url("img/oscurooo.webp") no-repeat center;
+  
+  background-size: 120%; /* 🔥 más pequeño (antes era gigante) */
 }
 
-/* Filtro oscuro elegante */
-.background-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(3px);
-  z-index: -1;
-}
-
-/* Contenedor general */
+/* CONTENEDOR */
 .container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  animation: fadeIn 1.2s ease;
+  padding: 10px;
 }
 
-/* ==================== LOGO Y TÍTULO ==================== */
-.logo-header {
+/* TITULOS CENTRADOS */
+h1, h2 {
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 24px;
 }
 
-.logo-header img {
-  width: 150px;
-  border-radius: 100%;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
-  animation: float 4s ease-in-out infinite;
+/* LOGO */
+.logo {
+  width: 120px;
+  display: block;
+  margin: auto;
 }
 
-.logo-header h1 {
-  font-size: 2.5rem;
-  color: #ff3b41;
-  margin-top: 10px;
-  text-shadow: 0 0 12px #000;
-  animation: slideDown 1s ease;
-}
-
-/* ==================== BOTÓN REGRESO ==================== */
-.boton-regreso {
-   display: block;
-  background: #ff3b41;
+/* BOTON */
+.btn-volver {
+  display: block;
+  text-align: center;
+  background: linear-gradient(45deg, red, orange);
   color: white;
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 30px auto;
-  margin-bottom: 15px;
-  transition: .3s;
-  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  width: 140px;
+  margin: 10px auto;
+  font-size: 16px;
+}
+/* BLOQUES */
+.bloque-menu {
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(6px);
 }
 
-.boton-regreso:hover {
-  background: #ff6267;
-  transform: scale(1.05);
-}
-
-/* ==================== PROMOCIONES ==================== */
-.promociones-seccion {
-  padding: 40px;
-  text-align: center;
-}
-
+/* ===== PROMOCIONES ===== */
 .slider {
-  position: relative;
-  max-width: 600px;
+  width: 100%;
+  max-width: 500px;
   margin: auto;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 .slider-ventana {
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
 }
 
 .slider-contenedor {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.4s ease;
 }
 
 .slide {
   min-width: 100%;
-  display: none; /* oculto por defecto */
-  justify-content: center;
 }
 
+/* 🔥 ESTA ES LA CLAVE */
 .slide img {
   width: 100%;
-  border-radius: 12px;
+  max-height: 200px;
+  object-fit: contain;
+  background: #000;
+  border-radius: 15px;
 }
 
-/* Flechas */
+/* FLECHAS */
 .flecha {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 40%;
   background: rgba(0,0,0,0.5);
   color: white;
   border: none;
-  font-size: 30px;
+  font-size: 25px;
+  padding: 10px;
   cursor: pointer;
-  padding: 5px 10px;
   z-index: 10;
 }
 
-.izquierda { left: 10px; }
-.derecha { right: 10px; }
-/* ===== MODAL ZOOM ===== */
-#modalZoom {
-  position: fixed;
-  top: 0;
-  left: 0;
+.izquierda { left: 5px; }
+.derecha { right: 5px; }
+
+/* ===== IMAGENES COMIDA ===== */
+.img-plato {
   width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-#modalZoom img {
-  max-width: 95%;
-  max-height: 95%;
-  object-fit: contain;
-}
-
-
-/* ==================== MENÚ GENERAL ==================== */
-.menu-general {
-  background: rgba(255,255,255,0.08);
-  padding: 20px;
+  max-width: 250px; /* 🔥 evita que sea gigante */
+  aspect-ratio: 1/1;
+  object-fit: cover;
   border-radius: 15px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  animation: fadeIn 1s ease;
+  display: block;
+  margin: 10px auto;
 }
 
-.titulo-seccion {
-  color: #ffd369;
-  font-size: 1.8rem;
-  text-align: center;
-  margin: 20px 0 10px;
-  text-shadow: 0 0 10px black;
-  animation: fadeInUp 0.8s ease;
+/* ZOOM */
+.img-plato:active {
+  transform: scale(1.5);
+  z-index: 100;
 }
 
-.bloque-menu {
-  background: rgba(0,0,0,0.5);
-  padding: 15px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  animation: fadeIn 0.8s ease;
-}
-
+/* ===== ITEMS ===== */
 .item {
   display: flex;
   justify-content: space-between;
-  background: rgba(255,255,255,0.15);
-  padding: 10px 15px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  transition: .3s ease;
+  font-size: 18px;
+  margin-top: 10px;
 }
-
-.item span:first-child {
-  font-weight: 600;
-}
-
-.item span:last-child {
-  color: #ff3b41;
+/* ITEMS */
+.item, .menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 18px;
   font-weight: bold;
 }
-
-.item:hover {
-  background: rgba(255,255,255,0.25);
-  transform: scale(1.03);
+/* 🔥 PRECIOS PRO */
+.price, .item span:last-child {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00ffcc;
+  background: rgba(0,255,200,0.1);
+  padding: 4px 10px;
+  border-radius: 10px;
+  animation: brillo 1.5s infinite alternate;
 }
 
-/* ==================== BOTÓN DE TIPOS DE ROLLOS ==================== */
+/* ANIMACION PRECIOS */
+@keyframes brillo {
+  from { transform: scale(1); opacity: 0.8; }
+  to { transform: scale(1.1); opacity: 1; }
+}
+
+.desc {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* BOTON ROLLOS */
 #toggleMenu {
-  display: block;
+  width: 90%;
+  padding: 12px;
+  background: orange;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+/* OCULTO */
+#menuContent {
+  display: none;
+  margin-top: 10px;
+}
+/* ===== BOTON ROLLOS ===== */
+#toggleMenu {
   width: 100%;
   padding: 12px;
-  background: #ff3b41;
-  color: white;
-  font-weight: bold;
+  background: orange;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin: 20px 0;
-  transition: .3s ease;
-}
-
-#toggleMenu:hover {
-  transform: scale(1.05);
-  background: #ff6267;
-}
-
-.menu {
-  background: rgba(0,0,0,0.65);
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 10px;
-  animation: fadeIn 1s ease;
-}
-
-.menu h2 {
-  color: #ffd369;
-  margin-top: 20px;
-}
-
-.menu ul {
-  list-style: none;
-  padding-left: 10px;
-}
-
-.menu li {
-  background: rgba(255,255,255,0.1);
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
-  transition: .3s ease;
-}
-
-.menu li:hover {
-  background: rgba(255,255,255,0.25);
-  transform: translateX(5px);
-}
-
-/* ==================== ANIMACIONES ==================== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
-#toggleMenu {
-  font-size: 22px;
-  padding: 15px 25px;
-  background: #ff0055;
-  color: white;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 0 15px #ff0055;
-  animation: glow 1.5s infinite alternate ease-in-out;
-}
-
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
-  }
-  100% {
-    box-shadow: 0 0 25px #ff00ff, 0 0 40px #ff00dd;
-  }
-}
-
-#toggleMenu:hover {
-  transform: scale(1.05);
-}
-.tablas-page {
-  background-image: url("img/logo_de_madera.png"); /* CAMBIA este nombre por tu imagen */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-  min-height: 100vh;
-}
-
-/* Capa oscura transparente para mayor contraste */
-.background-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(2px);
-  z-index: -1;
-}
-/* ==== TODAS LAS IMÁGENES DEL MENÚ ==== */
-.bloque-menu img,
-.descripcion img,
-p img {
-  width: 120px;
-  height: auto;
-  display: block;
-  margin: 10px auto;
   border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+  margin-top: 15px;
+  transition: 0.3s;
 }
 
-/* Hover animado */
-.bloque-menu img:hover,
-.descripcion img:hover,
-p img:hover {
+#toggleMenu:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  background: #ff9900;
 }
 
-/* ==== MODAL ==== */
-#imgModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(4px);
+/* MENU OCULTO */
+#menuContent {
   display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
+  margin-top: 10px;
 }
 
-#imgModal img {
-  width: 90%;
-  max-width: 480px;
-  border-radius: 15px;
-  animation: aparecer 0.3s ease;
+/* ===== COCTELES ===== */
+.cocteles-container h2 {
+  animation: aparecer 1s ease;
 }
 
 @keyframes aparecer {
-  from {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
+}
+/* IMAGENES */
+.img-plato {
+  width: 90%;
+  max-width: 250px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 10px auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* ZOOM */
+.img-plato.zoom {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  z-index: 9999;
+  width: 90%;
+  max-width: 400px;
+}
+.bloque-menu {
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(5px);
+}
+/* TEXTO */
+.desc, .menu-item p {
+  font-size: 15px;
+  color: #ddd;
+  text-align: center;
 }
