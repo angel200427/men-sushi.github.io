@@ -20,6 +20,25 @@ h1, h2 {
   text-align: center;
   font-size: 24px;
 }
+/* ===== TITULOS PRO VERDES ===== */
+h2, h3 {
+  color: #00ffcc;
+  text-align: center;
+  margin-bottom: 10px;
+}
+/* TITULOS PRINCIPALES */
+h2 {
+  color: #00ffcc;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* SUBTITULOS (NO CENTRADOS) */
+h3 {
+  color: #00ffcc;
+  text-align: left;
+  margin-bottom: 10px;
+}
 
 /* LOGO */
 .logo {
@@ -231,5 +250,86 @@ h1, h2 {
 .desc, .menu-item p {
   font-size: 15px;
   color: #ddd;
-  text-align: center;
+  text-align: left;
+}
+.menu-item span:first-child {
+  text-align: left;
+}
+
+/* PARA EVITAR TEXTO CENTRADO RARO */
+.menu-item {
+  width: 100%;
+}
+
+/* DESCRIPCIONES */
+.desc {
+  text-align: left;
+  margin-left: 10px;
+}
+/* ===== SUBTITULOS PRO (TODOS) ===== */
+.titulo-verde {
+  color: #00ffcc;
+  background: rgba(0,255,200,0.15);
+  padding: 6px 12px;
+  border-radius: 12px;
+
+  display: inline-block;
+
+  /* IZQUIERDA */
+  text-align: left;
+  margin: 10px 0;
+
+  /* 🔥 EFECTO PULSACION */
+  animation: pulso 1.2s infinite alternate;
+}
+/* ===== ANIMACION PULSACION ===== */
+@keyframes pulso {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+/* SUBTITULOS PRO */
+.bloque-menu h3 {
+  color: #00ffcc;
+  background: rgba(0,255,200,0.15);
+  padding: 6px 12px;
+  border-radius: 12px;
+
+  display: inline-block;
+
+  /* 👇 alineado a la izquierda */
+  text-align: left;
+  margin: 10px 0;
+
+  /* 👇 animación */
+  animation: pulso 1.2s infinite alternate;
+}
+/* SUBTITULOS A LA IZQUIERDA */
+h3 {
+  text-align: left;
+}
+.titulo-verde:active {
+  transform: scale(0.95);
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-item span:first-child {
+  text-align: left;
+  flex: 1;
+}
+
+.price {
+  white-space: nowrap;
+}
+
+.desc {
+  font-size: 14px;
+  color: #ccc;
+  margin: 5px 0 15px 0;
+  text-align: left;
 }
